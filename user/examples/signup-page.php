@@ -33,7 +33,7 @@ else{
                     </button>
                     <h4> or be classical </h4>
                   </div> -->
-                  <form class="form" method="post" action="">
+                  <form class="form" method="post" action="?create_user">
                     <div class="form-group">
                       <div class="input-group">
                         <div class="input-group-prepend">
@@ -87,7 +87,7 @@ else{
                     
                     <div class="text-center">
                       <!-- <a href="#pablo" class="btn btn-primary btn-round">Register</a> -->
-                      <input type="submit" name="submit" class="btn btn-primary btn-round" value="Submit">
+                      <input type="button"  name="submit" class="btn btn-primary btn-round signup_button" value="Submit">
                     </div>
                   </form>
 

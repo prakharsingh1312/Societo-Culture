@@ -151,7 +151,7 @@ $(document).ready( function()
 		
 	//Forms
 		$(document).on('click','.login_button',function(){ dologin(); });
-		$(document).on('submit','#form1',function(){ form1_submit(); });
+		$(document).on('click','.signup_button',function(){ signup(); });
 	//Admin panel buttons
 	//Department
 		$(document).on('click','#show_add_dept_button',function(){ showAddDept(); });
@@ -520,18 +520,22 @@ function showEditUser(id){
 		$('#modal-content').loadingView({'state':false});
 	});
 }
-function addUser(){
-	$('#modal-content').loadingView({'state':true});
-	var username=$('#add_user_username').val();
-	var first=$('#add_user_first_name').val();
-	var email=$('#add_user_email').val();
-	var department=$('#add_user_department').val();
-	var role=$('#add_user_role').val();
-	$.post('pages/users.php?add_user',{username:username,first:first,dept:department,role:role,email:email},function(data){
+function signup(){
+	$('#ReplaceHere').loadingView({'state':true});
+	var username=$('#username').val();
+	var name=$('#name').val();
+	var email=$('#useremail').val();
+	var mob=$('#usermob').val();
+	var pass=$('#userpass').val();
+	$.post('examples/signup-page.php?create_user',{username:username,name:name,useremail:email,usermob:mob,useremail:email,userpass:pass},function(data){
 		$('#modal-content').html(data);
-		
+		if(data==1){
+			notify('Signed Up Successfully',4,'success');
+			window.location = "#login";
+		}
+		else{
+		notify('Problem Signing Up',4,'danger');}
 		$('#modal-content').loadingView({'state':false});
-		showUserTable();
 	});
 }
 function editUser(id){
