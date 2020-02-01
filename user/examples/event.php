@@ -2,7 +2,7 @@
 include("../../assets/php/dbconfig.php");
 $eventid=$_GET["eventid"];
 
-  $query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' ";
+  $query="SELECT * FROM events_table WHERE event_id =".$eventid;
   $sq=mysqli_query($dbconfig,$query);
   $row=mysqli_fetch_array($sq);
 
