@@ -1,4 +1,4 @@
-<footer class="footer">
+<?php echo'<footer class="footer">
     <div class="container">
       <nav class="float-left">
         <ul>
@@ -32,4 +32,5 @@
         <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
       </div>
     </div>
-  </footer>
+  </footer>';
+?>
