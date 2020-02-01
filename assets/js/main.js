@@ -26,11 +26,7 @@ function showSignup(){
 function showlogin(){
 	$('#ReplaceHere').loadingView({'state':true});
 	$.get('examples/login-page.php',function(data){
-
-		if(data!=1)
 		$('#ReplaceHere').html(data);
-		else
-			showAdmin();
 		$('#ReplaceHere').loadingView({'state':false});
 	});
 }
