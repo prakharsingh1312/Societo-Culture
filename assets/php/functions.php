@@ -50,7 +50,7 @@ function upcoming_events(){
               <div class='card card-rotate card-background'>
                 <div class='front front-background' style=\"background-image: url('".$posterpath."');\">
                   <div class='card-body'>
-                    <h6 class='card-category'>Society name</h6>
+                    <h6 class='card-category'>".$societyname."</h6>
                     <a href='#pablo'>
                       <h3 class='card-title'>".$eventname."</h3>
                     </a>
@@ -251,40 +251,21 @@ function show_announcements(){
 	return $content;
 }
 function show_members(){
+	$_SESSION['soc_id']=1;
 	global $dbconfig;
-	$content='<tr>
-                        <td>1</td>
-                        
-                      <tr>
-                        <td>2</td>
-                        <td>Minerva Hooper</td>
-                        <td>$23,789</td>
-                        <td>Curaçao</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Sage Rodriguez</td>
-                        <td>$56,142</td>
-                        <td>Netherlands</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Philip Chaney</td>
-                        <td>$38,735</td>
-                        <td>Korea, South</td>
-                      </tr>';
-	$query="SELECT * FROM events_table WHERE event_type='2' ORDER BY event_time DESC";
+	$content='';
+	$query="SELECT * FROM user_table,members_table,departments_table WHERE mem_soc_id={$_SESSION['soc_id']} and user_id=mem_user_id and mem_dept=dept_id ORDER BY mem_score DESC";
 	$sq=mysqli_query($dbconfig,$query);
 	$i=0;
 	while($row=mysqli_fetch_array($sq)){
 		$i++;
 		$content.="<tr>
                         <td>{$i}</td>
-						<td>{}</td>
-                        <td>$36,738</td>
-                        <td>Niger</td>
+						<td>{$row['user_name']}</td>
+                        <td>{$row['mem_score']}</td>
+                        <td>{$row['dept_name']}</td>
                       </tr>";
 	}
-		
+		return $content;
 }
 ?>

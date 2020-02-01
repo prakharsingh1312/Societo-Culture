@@ -1,5 +1,8 @@
-<? include('../../assets/php/functions.php');?>	<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+	<?php include('../../assets/php/functions.php');
+$_SESSION['soc_id']=1;
+$_SESSION['soc_name']="Creative Computing Society";?>
 
 <head>
   <meta charset="utf-8" />
@@ -148,7 +151,7 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="container-fluid">
-<!--
+
           <div class="row">
             <div class="col-xl-4 col-lg-12">
               <div class="card card-chart">
@@ -269,7 +272,7 @@
               </div>
             </div>
           </div>
--->
+
           <div class="row">
             <div class="col-lg-6 col-md-12">
               <div class="card">
@@ -282,11 +285,11 @@
                     <thead class="text-warning">
                       <th>ID</th>
                       <th>Name</th>
-                      <th>Salary</th>
-                      <th>Country</th>
+                      <th>Score</th>
+                      <th>Department</th>
                     </thead>
                     <tbody>
-                      <?php show_members(); ?>
+                      <?php echo show_members(); ?>
                     </tbody>
                   </table>
                 </div>

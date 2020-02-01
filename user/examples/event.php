@@ -73,7 +73,7 @@ $eventid=$_GET["eventid"];
             <div class="tab-content">
 
               <div class="tab-pane active" id="product-page2">
-                <img src=" <?php echo $row["event_poster"]; ?> ">
+                <img src="../<?php echo $row["event_poster"]; ?> ">
               </div>
 
             </div>
