@@ -1,4 +1,4 @@
-<?php echo '<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url("assets/img/bg10.jpg");">
+<?php echo '<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url(\'assets/img/bg10.jpg\');">
     <div class="container" id="replaceHere1">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
