@@ -79,7 +79,7 @@ function showEvent(){
 	//$('#wrapper').loadingView({'state':true});
 	$.get('add_event.php',function(data){
 		$('#wrapper').html(data);
-		linkChange('#form_control');
+		linkChange('#header_event');
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -314,7 +314,7 @@ function logout(){
 	})
 }
 function linkChange(id){
-	var ids=['#users_dash','#user_profile','#departments','#manage_users','#form_control'];
+	var ids=['#users_dashboard','#user_profile','#departments','#manage_users','#header_event'];
 	$.each(ids,function(index,value){
 		if(id==value){
 			$(value).addClass('active');

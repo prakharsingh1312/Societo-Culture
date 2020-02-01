@@ -1,13 +1,13 @@
  <div class="sidebar-wrapper">
         <ul class="nav">
-          <li class="nav-item active  ">
-            <a class="nav-link" href="./dashboard.html">
+          <li class="nav-item active" id="users_dashboard" >
+            <a class="nav-link" href="#">
               <i class="material-icons">dashboard</i>
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./user.html">
+          <li class="nav-item">
+            <a class="nav-link" href="#profile" id="user_profile">
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
@@ -18,10 +18,10 @@
               <p>Table List</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./typography.html">
+          <li class="nav-item " id="header_event">
+            <a class="nav-link" href="#event">
               <i class="material-icons">library_books</i>
-              <p>Typography</p>
+              <p>Add Event</p>
             </a>
           </li>
           <li class="nav-item ">
