@@ -58,12 +58,12 @@ function showtrack(){
 	});
 }
 function showDash(){
-	$('#wrapper').loadingView({'state':true});
+	//$('#wrapper').loadingView({'state':true});
 	$.get('dash.php',function(data){
 
 		$('#wrapper').html(data);
 		linkChange('#users_dash');
-		$('#wrapper').loadingView({'state':false});
+		//$('#wrapper').loadingView({'state':false});
 	});
 }
 function showDept(){
@@ -76,11 +76,11 @@ function showDept(){
 	});
 }
 function showEvent(){
-	$('#wrapper').loadingView({'state':true});
+	//$('#wrapper').loadingView({'state':true});
 	$.get('add_event.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#form_control');
-		$('#wrapper').loadingView({'state':false});
+		//$('#wrapper').loadingView({'state':false});
 	});
 }
 function showUsers(){

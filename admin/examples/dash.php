@@ -1,3 +1,4 @@
+<?php include("../../assets/php/functions.php");?>
 <div class="container-fluid">
 
 					<div class="row">

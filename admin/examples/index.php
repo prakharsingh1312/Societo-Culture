@@ -1,3 +1,4 @@
+<?php include('../../assets/php/functions.php');?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -108,6 +109,7 @@
 	<script src="../assets/js/core/jquery.min.js"></script>
 	<script src="../../assets/js/jquery-base64.js"></script>
 	<script src="../../assets/js/jquery-cookies.js"></script>
+	<script src="../../assets/js/loadingView.js"></script>
 	<script src="../../assets/js/jquery.js"></script>
 	<script src="../../assets/js/main.js"></script>
 	<script src="../assets/js/core/popper.min.js"></script>
@@ -292,7 +294,7 @@
 		$( document ).ready( function () {
 			// Javascript method's body can be found in assets/js/demos.js
 			md.initDashboardPageCharts();
-
+			hash();
 		} );
 	</script>
 </body>
