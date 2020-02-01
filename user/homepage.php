@@ -118,7 +118,7 @@
                                             <img class="media-object" src="./assets/img/faces/avatar.jpg" alt="...">
                                         </div>
                                     </a>
-                                    <div class="media-body">
+                                    <div class="media-body" style="padding:0% 10% 0% 10%;">
                                         <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
                                         <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                                         <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
