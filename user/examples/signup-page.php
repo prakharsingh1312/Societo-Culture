@@ -1,4 +1,5 @@
 <?php
+include('../../assets/php/functions.php');
 if(isset($_GET['create_user']))
 {
 $name=$_POST["name"];

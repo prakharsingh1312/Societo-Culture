@@ -7,6 +7,7 @@ function create_user($name,$username,$useremail,$usermob,$password){
 	$query="INSERT into user_table (user_name,user_uname,user_email,user_mobile,user_password) VALUES('$name','$username','$useremail','$usermob','$password')";
 	$sq=mysqli_query($dbconfig,$query);
 	if($sq) return 1;
+	else return $query;
 }
 
 function login_user($username,$password){
@@ -37,11 +38,11 @@ function upcoming_events(){
 		$societyid=$row['society_id'];
 		
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
-		$abc=mysqli_query($dbconfig,$query);
+		$abc=mysqli_query($dbconfig,$query_get_society);
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
-		$logopath=$reult_society['so_logo'];
+		$logopath=$result_society['so_logo'];
 
 
 		$content.="<div class='col-md-6 col-lg-4'>
@@ -88,11 +89,11 @@ function past_events(){
 		$eventdate=DATE($row['event_date']);
 
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
-		$abc=mysqli_query($dbconfig,$query);
+		$abc=mysqli_query($dbconfig,$query_get_society);
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
-		$logopath=$reult_society['so_logo'];
+		$logopath=$result_society['so_logo'];
 
 
 		$content.="<div class='col-md-6'>
@@ -121,7 +122,7 @@ function filter_events_by_tag($tagvalue){
 		$reqtag=$tagvalue[i];
 
 		$query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' AND event_tags like '%".$reqtag."%' ORDER BY DATE(event_date)";
-		$sq=mysqli_query($dbconfig,$query);
+		$sq=mysqli_query($dbconfig,$query_get_society);
 		while($row=mysqli_fetch_array($sq)){
 		$eventname=$row['event_name'];
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
@@ -134,7 +135,7 @@ function filter_events_by_tag($tagvalue){
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
-		$logopath=$reult_society['so_logo'];
+		$logopath=$result_society['so_logo'];
 
 
 		$content.="<div class='col-md-6 col-lg-4'>
@@ -187,7 +188,7 @@ function filter_events_by_society($societyid){
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
-		$logopath=$reult_society['so_logo'];
+		$logopath=$result_society['so_logo'];
 
 
 		$content.="<div class='col-md-6'>
@@ -229,11 +230,11 @@ function show_announcements(){
 		$societyid=$row['society_id'];
 		
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
-		$abc=mysqli_query($dbconfig,$query);
+		$abc=mysqli_query($dbconfig,$query_get_society);
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
-		$logopath=$reult_society['so_logo'];
+		$logopath=$result_society['so_logo'];
 
 
 		$content.="<div class='carousel-item'>
