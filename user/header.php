@@ -14,16 +14,16 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="./examples/allsocieties.php" class="nav-link">
+            <a href="#societies" class="nav-link">
               <i class="material-icons">line_style</i> Societies at TIET
             </a>
           </li>
-         <!-- <li class="nav-item">
+         <li class="nav-item">
             <a href="#home" class="nav-link">
-              <i class="material-icons">notification_important</i> Announcements
+              <i class="material-icons">notification_important</i> Events
             </a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a href="#home" class="nav-link">
               <i class="material-icons">restore</i> Past Events
             </a>

@@ -24,6 +24,15 @@ function showSignup(){
 
 	});
 }
+function showSociety(){
+	$('#ReplaceHere').loadingView({'state':true});
+	$.get('examples/allsocieties.php',function(data){
+
+		$('#ReplaceHere').html(data);
+		$('#ReplaceHere').loadingView({'state':false});
+
+	});
+}
 function showlogin(){
 	$('#ReplaceHere').loadingView({'state':true});
 	$.get('examples/login-page.php',function(data){
@@ -228,6 +237,8 @@ function hash()
 		showSignup();
 	else if (hash == 'home')
 		showHome();
+	else if (hash == 'societies')
+		showSociety();
 	else if(window.location.href.indexOf('/admin')>0)
 		{
 			if(hash == '')
