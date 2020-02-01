@@ -7,7 +7,7 @@ if(isset($_GET["update_user"]))
   $name=$_POST["name"];
   $mobile=$_POST["mob"];
   $user_id=$_SESSION["user_id"];
-  $query="UPDATE user_table set user_name='$name' , user_uname='$username' , user_email='$email' , user_mobile='$mobile' WHERE user_id=$user_id ";
+  $query="UPDATE user_table set user_name='$name' , user_uname='$username' , user_email='$email' , user_mobile='$mobile' WHERE user_id = '$user_id' ";
 	echo $query;
   $abc=mysqli_query($dbconfig,$query);
   if($abc) echo"user updated";
