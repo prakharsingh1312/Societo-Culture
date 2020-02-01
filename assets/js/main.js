@@ -107,6 +107,13 @@ function showUserP(){
 		$('#wrapper').loadingView({'state':false});
 	});
 }
+function showattendance(){
+	$.get('attendance.php',function(data){
+		$('#wrapper').html(data);
+		linkChange('#header_attendance');
+		//$('#wrapper').loadingView({'state':false});
+	});
+}
 function bs_input_file() {
 	$(".input-file").before(
 		function() {
