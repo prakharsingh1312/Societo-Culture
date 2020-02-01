@@ -1,20 +1,22 @@
 <?php
 include '../../assets/php/functions.php';
-if(isset($_POST["submitevent"]))
+if(isset($_GET["submitevent"]))
 {
   $eventname=$_POST["eventname"];
   $eventdate=$_POST["eventdate"];
   $eventvenue=$_POST["eventvenue"];
   $eventdesc=$_POST["eventdesc"];
   $eventreglink=$_POST["eventreglink"];
+	$file=$_FILES['event_poster'];
+$eventposter=upload_file($file);
   $societyid=$_SESSION["soc_id"];
-  $query="INSERT into events_table (event_name,event_poster,event_des,event_tags,event_type,event_venue,event_date,event_reg_link,society_id) VALUES('$eventname','../../assets/img/e2.jpg','$eventdesc','123','1','$eventvenue','$eventdate','$eventreglink','$societyid') ";
+  $query="INSERT into events_table (event_name,event_poster,event_des,event_tags,event_type,event_venue,event_date,event_reg_link,society_id) VALUES('$eventname','$eventposter','$eventdesc','123','1','$eventvenue','$eventdate','$eventreglink','$societyid') ";
   $abc=mysqli_query($dbconfig,$query);
   if($abc) echo"event added";
   else echo "error";
 }
 
-if(isset($_POST["submitannouncement"]))
+if(isset($_GET["submitannouncement"]))
 {
   // $eventname=$_POST["eventname"];
   // $eventdate=$_POST["eventdate"];
@@ -37,7 +39,7 @@ if(isset($_POST["submitannouncement"]))
                   <p class="card-category">Enter the details of your event</p>
                 </div>
                 <div class="card-body">
-                  <form method="post">
+                  <form method="post" onsubmit="return false" id="event_form" action="" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
@@ -75,7 +77,7 @@ if(isset($_POST["submitannouncement"]))
                       </div>
                       <div class="col-md-6">
                       <div class="form-group">
-                        <input type="file" class="custom-file-input bmd-label-floating" id="customFile">
+                        <input type="file" class="custom-file-input bmd-label-floating" id="customFile" name="event_poster">
                         <label class="custom-file-label bmd-label-floating" for="customFile">Choose file</label> 
                       </div>
                     </div>
@@ -101,7 +103,7 @@ if(isset($_POST["submitannouncement"]))
                         </div>
                       </div>
                     </div>
-                    <input type="submit" name="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
+                    <input type="submit" name="submitevent" id="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -114,7 +116,7 @@ if(isset($_POST["submitannouncement"]))
                   <p class="card-category">Enter the details of the announcement</p>
                 </div>
                 <div class="card-body">
-                  <form method="post">
+                  <form method="post" onsubmit="return false" id="announcement_form" action="" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">

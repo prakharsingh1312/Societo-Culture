@@ -224,7 +224,8 @@ function filter_events_by_society($societyid){
 
 function upload_file($file){
     $name = $file["name"];
-    $ext = end((explode(".", $name)));
+	$tmp = explode('.', $name);
+    $ext = end($tmp);
     $path='assets/img/'.$name.'.'.$ext;
     $file=$file['tmp_name'];
     move_uploaded_file($file,'../../user/'.$path);
