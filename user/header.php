@@ -14,17 +14,17 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#home" class="nav-link">
               <i class="material-icons">line_style</i> Upcoming Events
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#announce" class="nav-link">
               <i class="material-icons">notification_important</i> Announcements
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#past" class="nav-link">
               <i class="material-icons">restore</i> Past Events
             </a>
           </li>
