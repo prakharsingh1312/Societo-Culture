@@ -14,11 +14,11 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#home" class="nav-link">
-              <i class="material-icons">line_style</i> Upcoming Events
+            <a href="./examples/allsocieties.php" class="nav-link">
+              <i class="material-icons">line_style</i> Societies at TIET
             </a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a href="#home" class="nav-link">
               <i class="material-icons">notification_important</i> Announcements
             </a>
@@ -27,10 +27,10 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
             <a href="#home" class="nav-link">
               <i class="material-icons">restore</i> Past Events
             </a>
-          </li>
+          </li> -->
           <li class="button-container nav-item iframe-extern">
             <a href="#login" class="btn  btn-rose   btn-round btn-block">
-              <i class="material-icons">fingerprint</i> Login In
+              <i class="material-icons">fingerprint</i> Login
             </a>
           </li>
         </ul>
