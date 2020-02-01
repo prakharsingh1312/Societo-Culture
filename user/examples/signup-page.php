@@ -12,11 +12,12 @@ echo create_user($name,$username,$useremail,$usermob,$password);
 else{
 	echo'
   <div class="page-header header-filter" filter-color="purple" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
-  <div id="notification_div"><div id="notification_inner_div"><div id="notification_inner_cell_div"></div></div></div>
+  
     <div class="container">
       <div class="row">
         <div class="col-lg-5 ml-auto mr-auto">
           <div class="card card-signup">
+          <div id="notification_div"><div id="notification_inner_div"><div id="notification_inner_cell_div"></div></div></div>
             <h2 class="card-title text-center">Register</h2>
             <div class="card-body">
               <div class="row">
