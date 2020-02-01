@@ -24,7 +24,7 @@ $eventid=$_GET["eventid"];
   <link rel="icon" type="image/png" href="../assets/img/favicon.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-    Material Kit PRO by Creative Tim
+    ConnecTU
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -62,7 +62,7 @@ $eventid=$_GET["eventid"];
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" filter-color="rose" style="background-image: url('../assets/img/bg6.jpg');">
+  <div class="page-header header-filter" data-parallax="true" filter-color="rose" style="background-image: url('../assets/img/examples/office2.jpg');">
   </div>
   <div class="section">
     <div class="container">
@@ -138,29 +138,7 @@ $eventid=$_GET["eventid"];
    </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <nav class="float-left">
-        <ul>
-          <li>
-            <a href="https://creative-tim.com/presentation">
-              About Us
-            </a>
-          </li>
-          <li>
-            <a href="http://blog.creative-tim.com">
-              Blog
-            </a>
-          </li>
-          <li>
-            <a href="https://www.creative-tim.com/license">
-              Licenses
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
+  <br>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
