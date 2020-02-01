@@ -294,14 +294,17 @@
 	</script>
 	<script>
 		$( document ).ready( function () {
-			// Javascript method's body can be found in assets/js/demos.js
-			md.initDashboardPageCharts();
 			$(window).bind('hashchange', function ()
 		{
 			hash();
 		});
 			hash();
 		} );
+			// Javascript method's body can be found in assets/js/demos.js
+			setTimeout(function(){
+				md.initDashboardPageCharts();
+			},5000);
+			
 	</script>
 	<script src="../assets/js/plugins/moment.min.js"></script>
   <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>

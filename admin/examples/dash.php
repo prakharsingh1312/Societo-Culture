@@ -180,7 +180,7 @@
 								</div>
 								<div class="card-body">
 									<div class="tab-content">
-										<div class="tab-pane active" id="profile">
+										<div class="tab-pane active" >
 											<table class="table">
 												<tbody>
 													<tr>

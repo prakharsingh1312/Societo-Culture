@@ -92,7 +92,7 @@ function showUsers(){
 	});
 }
 function showUserP(){
-	$.get('./pages/user_profile.php',function(data){
+	$.get('user.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#user_profile');
 		$('#wrapper').loadingView({'state':false});
@@ -235,7 +235,7 @@ function hash()
 				showEvent();
 			else if(hash == 'users')
 				showUsers();
-			else if(hash == 'userP')
+			else if(hash == 'profile')
 				showUserP();
 		}
 }
