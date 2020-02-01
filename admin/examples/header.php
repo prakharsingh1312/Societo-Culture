@@ -36,6 +36,12 @@
               <p>Departments</p>
             </a>
           </li>
+			<li class="nav-item "id="header_task">
+            <a class="nav-link" href="#task">
+              <i class="material-icons">playlist_add_check</i>
+              <p>Tasks</p>
+            </a>
+          </li>
           <li class="nav-item ">
             <a class="nav-link" href="./notifications.html">
               <i class="material-icons">notifications</i>

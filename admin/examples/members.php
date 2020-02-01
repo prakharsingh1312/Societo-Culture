@@ -81,7 +81,7 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
                   <p class="card-category">Add a New User</p>
                 </div>
                 <div class="card-body">
-                  <form method="post">
+                  <form method="post" onsubmit="return false" id="member_form" action="" enctype="multipart/form-data">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
@@ -151,7 +151,7 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
 
 <?php
 
-if(isset($_POST["adduser"]))
+if(isset($_GET["adduser"]))
 {
   $addemail=$_POST["addemail"];
   $addrole=$_POST["addrole"];
