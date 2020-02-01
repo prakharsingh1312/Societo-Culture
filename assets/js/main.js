@@ -69,9 +69,9 @@ linkChange('#users_dashboard');
 function showDept(){
 	//$('#wrapper').loadingView({'state':true});
 	$.get('add_dept.php',function(data){
-
+linkChange('#header_dept');
 		$('#wrapper').html(data);
-		linkChange('#header_dept');
+		
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -87,7 +87,7 @@ function showUsers(){
 	//$('#wrapper').loadingView({'state':true});
 	$.get('members.php',function(data){
 		$('#wrapper').html(data);
-		linkChange('#manage_users');
+		linkChange('#header_members');
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -159,6 +159,7 @@ $(document).ready( function()
 	//Department
 		$(document).on('click','#show_add_dept_button',function(){ showAddDept(); });
 		$(document).on('submit','#event_form',function(){ var data=form_submit("#event_form","add_event.php?submitevent"); });
+		$(document).on('submit','#dept_form',function(){ var data=form_submit("#dept_form","add_dept.php?add_dept"); });
 		$(document).on('submit','#announcement_form',function(){ var data=form_submit("#announcement_form","add_event.php?submitannouncement"); });
 		$(document).on('click','.add_dept_button',function(){ addDept(); });
 		$(document).on('click','.dept_show_edit_button',function(){
@@ -319,7 +320,7 @@ function logout(){
 	})
 }
 function linkChange(id){
-	var ids=['#users_dashboard','#user_profile','#departments','#manage_users','#header_event'];
+	var ids=['#users_dashboard','#user_profile','#header_dept','#manage_users','#header_event','#header_members'];
 	$.each(ids,function(index,value){
 		if(id==value){
 			$(value).addClass('active');
@@ -546,7 +547,9 @@ function form_submit(id,url){
 				//$("#btnSubmit").prop("disabled", false);
 				//$('#form1').loadingView({'state':false});
 				 console.log("success : ", data);
+				location.reload();
 				return data;
+				
             },
             error: function (e) {
 

@@ -1,4 +1,6 @@
-
+<?php
+include '../../assets/php/dbconfig.php';
+?>
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-12">
@@ -21,27 +23,48 @@
                         <th>
                           Name
                         </th>
-            
                          <th>
                           Phone Number
                         </th>
                         
                       </thead>
                       <tbody>
+
+<?php
+
+$query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
+    $sq=mysqli_query($dbconfig,$query);
+    while($row=mysqli_fetch_array($sq)) {
+
+      $query_get_count="SELECT * from user_table WHERE user_id =".$row['mem_user_id'];
+    $abc=mysqli_query($dbconfig,$query_get_count);
+    $result_society=mysqli_fetch_array($abc);
+
+      echo "
+
                         <tr>
                           <td>
-                            1
+                            ".$result_society['user_id']."
                           </td>
                           <td>
-                            XYZ
+                            ".$result_society['user_email']."
                           </td>
                           <td>
-                            jhaejhd
+                            ".$result_society['user_name']."
                           </td>
-                          <td class="text-primary " >
-                            36,738
+                          <td class='text-primary'>
+                            ".$result_society['user_mobile']."
                           </td>
                         </tr>
+       
+
+      ";
+    }
+
+?>
+
+
+
                       </tbody>
                     </table>
                   </div>
