@@ -32,7 +32,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
 			<div class="logo"><a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          <?php echo $_SESSION['soc_name'] ?>
+          <?php echo $_SESSION['user_name'];?>
         </a>
 			</div>
 			<?php include("header.php");?>
@@ -42,7 +42,7 @@
 			<nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top " id="navigation-example">
 				<div class="container-fluid">
 					<div class="navbar-wrapper">
-						<a class="navbar-brand" href="javascript:void(0)"><?php echo $_SESSION['user_name'];?></a>
+						<a class="navbar-brand" href="javascript:void(0)"><?php echo $_SESSION['soc_name'] ?></a>
 					</div>
 					<!--
           <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation" data-target="#navigation-example">
