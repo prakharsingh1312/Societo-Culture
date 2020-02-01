@@ -79,23 +79,26 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
                 <div class="card-body">
                   <form method="post">
                     <div class="row">
-                      <div class="col-md-5">
+                      <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email of the candidate</label>
                           <input type="text" class="form-control" value="" >
                         </div>
-                      </div>
+                      
                       
                       
                     </div>
-                    <div class="row">
+                    
                       <div class="col-md-7">
                         <div class="form-group">
                           <label class="bmd-label-floating">Task Details</label>
                           <input type="email" name="addemail" class="form-control" required>
                         </div>
-                      </div>
-                      
+                     </div>
+                     <div class="col-md-2">
+                        <input type="submit" name="adduser" class="btn btn-success pull-right" value="Add Task"></input>
+                     </div>
+
                     </div>
 </form>
 </div>
