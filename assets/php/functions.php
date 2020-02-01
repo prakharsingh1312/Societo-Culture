@@ -19,7 +19,22 @@ function login_user($username,$password){
 	if(!empty($row))
 	{
 		if ($row['user_password'] == $password) {
+			$query_get_society="SELECT * from members_table WHERE mem_user_id =".$row['user_id'];
+			$abc=mysqli_query($dbconfig,$query_get_society);
+			$result_society=mysqli_fetch_array($abc);
+
+			$query1="SELECT * from society_table WHERE so_id =".$result_society['mem_soc_id'];
+			$abc1=mysqli_query($dbconfig,$query1);
+			$result1=mysqli_fetch_array($abc1);
+
+			$_SESSION['soc_id']=$result1['so_id'];
+			$_SESSION['soc_name']=$result1['so_name'];
+			$_SESSION['user_name']=$row['user_name'];
+			$_SESSION['user_id']=$row['user_name'];
+
+
 			return 1;
+			}
 		}
 		else return 0;
 	}
@@ -96,7 +111,7 @@ function past_events(){
 		$logopath=$result_society['so_logo'];
 
 
-		$content.="<div class='col-md-6'>
+		$content.="<div class='col-md-6 col-lg-4'>
                     <div class='card card-background' style=\"background-image: url('".$posterpath."');\">
                         <div class='card-body'>
                             <h6 class='card-category text-info'>".$societyname."</h6>
