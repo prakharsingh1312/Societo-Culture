@@ -14,7 +14,7 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a href="#home" class="nav-link">
+            <a href="#upcoming" class="nav-link">
               <i class="material-icons">line_style</i> Upcoming Events
             </a>
           </li>
@@ -39,27 +39,6 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
 
   </nav>
 
-  <nav id="cd-vertical-nav">
-    <ul>
-      <li>
-        <a href="#buttons" data-number="1">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Upcoming Events</span>
-        </a>
-      </li>
-      <li>
-        <a href="#navigation" data-number="2">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Announcements</span>
-        </a>
-      </li>
-      <li>
-        <a href="#notifications" data-number="3">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Past Events</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+
 </nav>';
 ?>

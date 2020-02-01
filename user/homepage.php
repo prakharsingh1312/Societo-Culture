@@ -21,7 +21,7 @@
   </div>
   <div class="main main-raised">
     <div class="container">
-      <div class="section" style="padding:10px 0;">
+      <div class="section" style="padding:10px 0;" id="upcoming">
         <h3 class="title text-center">Upcoming Events</h3>
 
         <div class="row">
@@ -138,7 +138,7 @@ echo'
         </div>
     </div>
     <h3 class="title text-center">Past Events</h3>
-    <div class="row" id="past" style="padding:10px 0;">';
+    <div class="row" id="modal-content">';
 
        echo past_events();
 echo'
