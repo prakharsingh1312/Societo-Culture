@@ -77,40 +77,112 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
             <div class="col-lg-6 col-md-12">
               <div class="card">
                 <div class="card-header card-header-success">
-                  <h4 class="card-title">Add User</h4>
+                  <h4 class="card-title">Add Member</h4>
                   <p class="card-category">Add a New User</p>
                 </div>
                 <div class="card-body">
-                  <form>
+                  <form method="post">
                     <div class="row">
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Society</label>
-                          <input type="text" class="form-control" disabled>
+                          <input type="text" class="form-control" value="<?php echo $_SESSION['soc_name']; ?>" disabled>
                         </div>
                       </div>
-                      <div class="col-md-7">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
+                      
                       
                     </div>
                     <div class="row">
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email</label>
-                          <input type="text" class="form-control">
+                          <input type="email" name="addemail" class="form-control" required>
+                        </div>
+                      </div>
+                      
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Role</label>
+                          <select name="addrole" class="form-control" required>
+                            <option disabled> Select Role </option>
+                            <option value="1">Executive</option>
+                            <option value="2">Core</option>
+                            <option value="3">Member</option>
+                          </select>
                         </div>
                       </div>
                       
                     </div>
                     
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="form-group">
+                          <label class="bmd-label-floating">Department</label>
+                          <select name="addmemdept" class="form-control" required>
+                            <option disabled> Select Role </option>
+                         
+<?php
+    $query2="SELECT * FROM departments_table WHERE dept_soc_id = ".$_SESSION['soc_id'];
+    $sq2=mysqli_query($dbconfig,$query2);
+    while($row2=mysqli_fetch_array($sq2))
+    {
+      echo "
+
+
+                            <option value=' ".$row2['dept_id']." '> ".$row2['dept_name']." </option>
+
+      ";
+    }
+?>
+
+                         
+                          </select>
+                        </div>
+                      </div>
+                      
+                    </div>
                     
-                    <button type="submit" class="btn btn-success pull-right">Add User</button>
+                    <input type="submit" name="adduser" class="btn btn-success pull-right" value="Add User"></input>
                     <div class="clearfix"></div>
                   </form>
+
+<?php
+
+if(isset($_POST["adduser"]))
+{
+  $addemail=$_POST["addemail"];
+  $addrole=$_POST["addrole"];
+
+  $query1="SELECT * FROM user_table WHERE user_email = '".$addemail."'"; echo $query1;
+    $sq1=mysqli_query($dbconfig,$query1);
+    $row1=mysqli_fetch_array($sq1);
+
+  if(!empty($row1))
+  {
+
+    $userid=$row1['user_id'];
+    $socid=$_SESSION['soc_id'];
+    $memdept=$_POST['addmemdept'];
+    $memrole=$_POST['addrole'];
+
+
+    $query2="INSERT into members_table (mem_user_id,mem_soc_id,mem_dept,mem_score,mem_role) VALUES ('$userid','$socid','$memdept','0','$memrole')"; echo $query2;
+    $sq2=mysqli_query($dbconfig,$query2);
+    if($sq2) echo "member added";
+    else echo "error adding member";
+  }
+  else echo "user does not exist";
+}
+
+?>
+
+
+
+
+
                 </div>
               </div>
             </div>
@@ -120,42 +192,8 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
 
             <div class="col-lg-6 col-md-12">
               <div class="card">
-                <div class="card-header card-header-warning">
-                  <h4 class="card-title">Modify Department</h4>
-                  <p class="card-category">Edit or Delete a Department</p>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-5">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Society</label>
-                          <input type="text" class="form-control" disabled>
-                        </div>
-                      </div>
-                      <div class="col-md-7">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Department ID</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <label class="bmd-label-floating">Department Name</label>
-                          <input type="text" class="form-control">
-                        </div>
-                      </div>
-                      
-                    </div>
-                    
-                    
-                    <button type="submit" class="btn btn-warning pull-right">Create Department</button>
-                    <div class="clearfix"></div>
-                  </form>
-                </div>
+               
+              
               </div>
             </div>
            
