@@ -1,5 +1,13 @@
 <?php
+include("../../assets/php/functions.php");
+if(isset($_GET['login'])){
+	$username=mysqli_real_escape_string($dbconfig,$_POST['username']);
+	$password=mysqli_real_escape_string($dbconfig,$_POST['password']);
+	echo login_user($username,$password);
+}
+else{
 echo '<div class="page-header header-filter" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
+<div id="notification_div"><div id="notification_inner_div"><div id="notification_inner_cell_div"></div></div></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
@@ -35,6 +43,7 @@ echo '<div class="page-header header-filter" style="background-image: url(\'asse
               </div>
               <div class="card-footer justify-content-center">
                 <button class="btn btn-rose btn-link btn-lg login_button">Lets Go</button>
+                <p> Not registered? </p> <a href="#">click here</a>
               </div>
             </div>
           </form>
@@ -42,6 +51,6 @@ echo '<div class="page-header header-filter" style="background-image: url(\'asse
       </div>
     </div>
     
-  </div>';
+  </div>';}
 ?>
  
