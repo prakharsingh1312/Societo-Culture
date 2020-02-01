@@ -250,7 +250,7 @@ function show_announcements(){
 		$logopath=$result_society['so_logo'];
 
 
-		$content.="<div class='carousel-item'>
+		$content.="<div class='carousel-item active'>
                                 <div class='media' style='padding:0% 10% 0% 10%;'>
                                     <a class='float-left' href='#pablo'>
                                         <div class='avatar'>
