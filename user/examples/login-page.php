@@ -7,6 +7,7 @@ if(isset($_GET['login'])){
 }
 else{
 echo '<div class="page-header header-filter" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
+<div id="notification_div"><div id="notification_inner_div"><div id="notification_inner_cell_div"></div></div></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 col-sm-8 ml-auto mr-auto">
