@@ -3,11 +3,11 @@
 
 
 //Loading view
-var global_cookie_prefix = 'NIT';
+var global_cookie_prefix = 'Hackowasp';
 //pageload functions
 
 function showlogin(){
-	$('.wrapper').loadingView({'state':true});
+	$('#').loadingView({'state':true});
 	$.get('login.php',function(data){
 
 		if(data!=1)
@@ -292,10 +292,10 @@ function hash()
 	var hash = window.location.hash.slice(1);
 	if(hash == 'login')
 		showlogin();
-	else if(hash == 'new')
-		showformlist();
-	else if (hash == 'track')
-		showtrack();
+	else if(hash == 'signup')
+		showSignup();
+	else if (hash == 'home')
+		showHome();
 	else if(window.location.href.indexOf('/admin')>0)
 		{
 			if(hash == '')
