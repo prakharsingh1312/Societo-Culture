@@ -527,11 +527,14 @@ function signup(){
 	var email=$('#useremail').val();
 	var mob=$('#usermob').val();
 	var pass=$('#userpass').val();
-	$.post('pages/users.php?add_user',{username:username,name:name,useremail:email,usermob:mob,useremail:email,userpass:pass},function(data){
+	$.post('examples/signup-page.php?create_user',{username:username,name:name,useremail:email,usermob:mob,useremail:email,userpass:pass},function(data){
 		$('#modal-content').html(data);
 		if(data==1){
+			notify('Signed Up Successfully',4,'success');
 			window.location = "#login";
 		}
+		else{
+		notify('Problem Signing Up',4,'danger');}
 		$('#modal-content').loadingView({'state':false});
 	});
 }
