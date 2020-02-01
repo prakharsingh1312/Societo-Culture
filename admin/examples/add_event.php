@@ -34,7 +34,7 @@ if(isset($_GET["submitannouncement"]))
           <div class="row">
             <div class="col-md-8">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-success">
                   <h4 class="card-title">Adding Events to Publish</h4>
                   <p class="card-category">Enter the details of your event</p>
                 </div>
@@ -103,7 +103,15 @@ if(isset($_GET["submitannouncement"]))
                         </div>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <input type="submit" name="submitevent" id="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
+=======
+
+                   
+
+                    <input type="submit" name="submitevent" class="btn btn-warning pull-right" value="Post It !"></input>
+
+>>>>>>> 315322eb2be3e0953c5e4afb3cee889f702e7ddc
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -111,7 +119,7 @@ if(isset($_GET["submitannouncement"]))
             </div>
             <div class="col-md-4">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-warning">
                   <h4 class="card-title">Adding Announcements</h4>
                   <p class="card-category">Enter the details of the announcement</p>
                 </div>
@@ -152,7 +160,11 @@ if(isset($_GET["submitannouncement"]))
                         </div>
                       </div>
                     </div>
-                    <input type="submit" name="submitannouncement" class="btn btn-primary pull-right" value="Announce"></input>
+
+                   
+
+                    <input type="submit" name="submitannouncement" class="btn btn-success pull-right" value="Announce"></input>
+
                     <div class="clearfix"></div>
                   </form>
                 </div>
