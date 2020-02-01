@@ -44,7 +44,7 @@ echo '<div class="page-header header-filter" style="background-image: url(\'asse
               </div>
               <div class="card-footer justify-content-center">
                 <button class="btn btn-rose btn-link btn-lg login_button">Lets Go</button>
-                <button class="btn btn-info btn-link btn-lg login_button">Signup Instead</button>
+                <a href="#signup" class="btn btn-info btn-link btn-lg">Signup Instead</a>
               </div>              
             </div>
           </form>
