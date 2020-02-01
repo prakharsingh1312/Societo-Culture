@@ -6,16 +6,16 @@
               <p>Dashboard</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#profile" id="user_profile">
+          <li class="nav-item" id="user_profile">
+            <a class="nav-link" href="#profile" >
               <i class="material-icons">person</i>
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./tables.html">
+          <li class="nav-item " id="header_attendance">
+            <a class="nav-link" href="#attendance">
               <i class="material-icons">content_paste</i>
-              <p>Table List</p>
+              <p>Attendance</p>
             </a>
           </li>
           <li class="nav-item " id="header_event">
@@ -24,16 +24,16 @@
               <p>Add Event</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
+          <li class="nav-item" id="header_members" >
+            <a class="nav-link" href="#members">
+              <i class="material-icons">people_outline</i>
+              <p>Members</p>
             </a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
+            <a class="nav-link" href="#dept">
+              <i class="material-icons">account_tree</i>
+              <p>Departments</p>
             </a>
           </li>
           <li class="nav-item ">

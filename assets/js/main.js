@@ -67,12 +67,12 @@ function showDash(){
 	});
 }
 function showDept(){
-	$('#wrapper').loadingView({'state':true});
-	$.get('./pages/dept.php',function(data){
+	//$('#wrapper').loadingView({'state':true});
+	$.get('add_dept.php',function(data){
 
 		$('#wrapper').html(data);
-		linkChange('#departments');
-		$('#wrapper').loadingView({'state':false});
+		linkChange('#header_dept');
+		//$('#wrapper').loadingView({'state':false});
 	});
 }
 function showEvent(){
@@ -84,11 +84,11 @@ function showEvent(){
 	});
 }
 function showUsers(){
-	$('#wrapper').loadingView({'state':true});
-	$.get('./pages/users.php',function(data){
+	//$('#wrapper').loadingView({'state':true});
+	$.get('members.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#manage_users');
-		$('#wrapper').loadingView({'state':false});
+		//$('#wrapper').loadingView({'state':false});
 	});
 }
 function showUserP(){
@@ -233,10 +233,13 @@ function hash()
 				showDept();
 			else if(hash == 'event')
 				showEvent();
-			else if(hash == 'users')
+			else if(hash == 'members')
 				showUsers();
 			else if(hash == 'profile')
 				showUserP();
+			else if(hash == 'attendance')
+				showattendance();
+			
 		}
 }
 function dologin(){
