@@ -79,13 +79,14 @@ $societyid=$_GET["societyid"];
 
   $query="SELECT * FROM members_table WHERE mem_soc_id =".$societyid;
   $sq=mysqli_query($dbconfig,$query);
+							$i=0;
   while($row=mysqli_fetch_array($sq))
   {
     
     $query_get_user="SELECT * from user_table WHERE user_id = ".$row['mem_user_id'];
     $abc=mysqli_query($dbconfig,$query_get_user);
     // echo $query_get_user;
-	  $i=0;
+	  
     $result_user=mysqli_fetch_array($abc);
 $i++;
     echo "
