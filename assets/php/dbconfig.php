@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	$dbHost = "35.225.148.206";
 	$dbDatabase = "hackowasp";
 	$dbPasswrod = "Popat#Panda@1234$";
