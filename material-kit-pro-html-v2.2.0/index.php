@@ -28,6 +28,7 @@
   <?php include("footer.php");?>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+	<script src="../assets/js/jquery.js"></script>
 		<script src="../assets/js/main.js"></script>
 		<script src="../assets/js/loadingView.js"></script>
   <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
