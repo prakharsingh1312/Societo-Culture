@@ -154,11 +154,11 @@ if(isset($_POST["submitannouncement"]))
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
+
                     <button type="submit" class="btn btn-warning pull-right">Announce!</button>
-=======
+
                     <input type="submit" name="submitannouncement" class="btn btn-primary pull-right" value="Announce"></input>
->>>>>>> c8fd8e63744dd541e21e2f9dda365b59671fe2a1
+
                     <div class="clearfix"></div>
                   </form>
                 </div>
