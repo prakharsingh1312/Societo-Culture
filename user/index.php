@@ -58,28 +58,7 @@
   <script src="assets/demo/demo.js" type="text/javascript"></script>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="assets/js/material-kit.js?v=2.2.0" type="text/javascript"></script>
-  <nav id="cd-vertical-nav">
-    <ul>
-      <li>
-        <a href="#buttons" data-number="1">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Upcoming Events</span>
-        </a>
-      </li>
-      <li>
-        <a href="#navigation" data-number="2">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Announcements</span>
-        </a>
-      </li>
-      <li>
-        <a href="#notifications" data-number="3">
-          <span class="cd-dot"></span>
-          <span class="cd-label">Past Events</span>
-        </a>
-      </li>
-    </ul>
-  </nav>
+
 </body>
 
 </html>

@@ -51,7 +51,7 @@ function upcoming_events(){
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
 		$posterpath=$row['event_poster'];
 		$societyid=$row['society_id'];
-		
+		$eventdate=date("d-m-Y",strtotime($row['event_date']));
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
 		$abc=mysqli_query($dbconfig,$query_get_society);
 		$result_society=mysqli_fetch_array($abc);
@@ -72,6 +72,7 @@ function upcoming_events(){
                     <p class='card-description'>
                      ".$eventdesc."
                     </p>
+                    <h4 class='card-title'> ".$eventdate." </h4>
                   </div>
                 </div>
                 <div class='back back-background' style=\"background-image: url('".$posterpath."');\">
@@ -101,7 +102,7 @@ function past_events(){
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,150); $eventdesc.='...';
 		$posterpath=$row['event_poster'];
 		$societyid=$row['society_id'];
-		$eventdate=DATE($row['event_date']);
+		$eventdate=date("d-m-Y",strtotime($row['event_date']));
 
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
 		$abc=mysqli_query($dbconfig,$query_get_society);
@@ -140,7 +141,7 @@ function filter_events_by_tag($tagvalue){
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
 		$posterpath=$row['event_poster'];
 		$societyid=$row['society_id'];
-		$eventdate=DATE($row['event_date']);
+		$eventdate=date("d-m-Y",strtotime($row['event_date']));
 
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
 		$abc=mysqli_query($dbconfig,$query_get_society);
@@ -193,7 +194,7 @@ function filter_events_by_society($societyid){
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
 		$posterpath=$row['event_poster'];
 		$societyid=$row['society_id'];
-		$eventdate=DATE($row['event_date']);
+		$eventdate=date("d-m-Y",strtotime($row['event_date']));
 
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
 		$abc=mysqli_query($dbconfig,$query_get_society);
