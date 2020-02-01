@@ -77,11 +77,8 @@ if(isset($_GET["submitannouncement"]))
                       </div>
                       <div class="col-md-6">
                       <div class="form-group">
-<<<<<<< HEAD
-                        <input type="file" class="custom-file-input bmd-label-floating" id="customFile" name="event_poster">
-=======
-                        <input type="file" class="custom-file-input" id="customFile">
->>>>>>> d56a241add5f4f7dcc393bd839f21c61a79eb2b8
+<input type="file" class="custom-file-input bmd-label-floating" id="customFile" name="event_poster">
+
                         <label class="custom-file-label bmd-label-floating" for="customFile">Choose file</label> 
                       </div>
                     </div>
@@ -107,15 +104,9 @@ if(isset($_GET["submitannouncement"]))
                         </div>
                       </div>
                     </div>
-<<<<<<< HEAD
+
                     <input type="submit" name="submitevent" id="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
-=======
 
-                   
-
-                    <input type="submit" name="submitevent" class="btn btn-warning pull-right" value="Post It !"></input>
-
->>>>>>> 315322eb2be3e0953c5e4afb3cee889f702e7ddc
                     <div class="clearfix"></div>
                   </form>
                 </div>
