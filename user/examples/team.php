@@ -17,7 +17,7 @@ $societyid=$_GET["societyid"];
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Kit
+        ConnecTU
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -35,7 +35,7 @@ $societyid=$_GET["societyid"];
         <div class="container">
             <div class="navbar-translate">
                 <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit-pro/index.html">
-                    Material Kit PRO </a>
+                    ConnecTU </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
@@ -61,7 +61,7 @@ $societyid=$_GET["societyid"];
                 <div class="col-md-8 ml-auto mr-auto text-center">
                     <div class="brand">
                         <h2 class="title"> <?php echo $row1["so_name"] ?> </h2>
-                        <img src="<?php echo $row1["so_logo"] ?> " style="height:200px;"/>
+                        <img src="../<?php echo $row1["so_logo"] ?> " style="height:200px;"/>
                     </div>
                 </div>
             </div>
@@ -85,14 +85,15 @@ $societyid=$_GET["societyid"];
     $query_get_user="SELECT * from user_table WHERE user_id = ".$row['mem_user_id'];
     $abc=mysqli_query($dbconfig,$query_get_user);
     // echo $query_get_user;
+	  $i=0;
     $result_user=mysqli_fetch_array($abc);
-
+$i++;
     echo "
                     <div class='col-md-4'>
                         <div class='team-player'>
                             <div class='card card-plain'>
                                 <div class='col-md-6 ml-auto mr-auto'>
-                                    <img src='../assets/img/faces/avatar.jpg' alt='Thumbnail Image' class='img-raised rounded-circle img-fluid'>
+                                    <img src='../assets/img/faces/".$i.".jpg' alt='Thumbnail Image' class='img-raised rounded-circle img-fluid'>
                                 </div>
                                 <h4 class='card-title'>".$result_user['user_name']."
                                    

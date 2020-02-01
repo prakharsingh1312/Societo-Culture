@@ -39,7 +39,7 @@ include("../../assets/php/dbconfig.php");
                   <h6 class='card-category text-muted'>".$row['so_name']."</h6>
                 </div>
 
-                <a href='team.php?societyid=".$row['so_id']."'> <button class='btn btn-primary-small'> View Team </button> </a>
+                <a href='examples/team.php?societyid=".$row['so_id']."'> <button class='btn btn-primary-small'> View Team </button> </a>
 
                 <div class='card-footer justify-content-center'>
                   <a href='#pablo' class='btn btn-just-icon btn-dribbble btn-round'><i class='fa fa-dribbble'></i></a>
