@@ -7,7 +7,7 @@ var global_cookie_prefix = 'Hackowasp';
 //pageload functions
 function showHome(){
 	$('#ReplaceHere').loadingView({'state':true});
-	$.get('user/homepage.php',function(data){
+	$.get('homepage.php',function(data){
 
 		$('#ReplaceHere').html(data);
 		$('#ReplaceHere').loadingView({'state':false});
@@ -16,7 +16,7 @@ function showHome(){
 }
 function showSignup(){
 	$('#ReplaceHere').loadingView({'state':true});
-	$.get('user/examples/signup-page.php',function(data){
+	$.get('examples/signup-page.php',function(data){
 
 		$('#ReplaceHere').html(data);
 		$('#ReplaceHere').loadingView({'state':false});
@@ -25,7 +25,7 @@ function showSignup(){
 }
 function showlogin(){
 	$('#ReplaceHere').loadingView({'state':true});
-	$.get('user/examples/login-page.php',function(data){
+	$.get('examples/login-page.php',function(data){
 
 		if(data!=1)
 		$('#ReplaceHere').html(data);
