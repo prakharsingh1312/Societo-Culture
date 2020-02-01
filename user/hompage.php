@@ -87,6 +87,55 @@
         </div>
       </div>
     </div>
+    <div id="comments">
+        <div class="row">
+            <div class="col-md-8 ml-auto mr-auto">
+                <div class="media-area">
+                    <h3 class="title text-center">Announcements</h3>
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="media" style="padding:0% 10% 0% 10%;">
+                                    <a class="float-left" href="#pablo">
+                                        <div class="avatar">
+                                            <img class="media-object" src="./assets/img/faces/avatar.jpg" alt="...">
+                                        </div>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                        <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
+                                        <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="media">
+                                    <a class="float-left" href="#pablo">
+                                        <div class="avatar">
+                                            <img class="media-object" src="./assets/img/faces/avatar.jpg" alt="...">
+                                        </div>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                        <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
+                                        <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
