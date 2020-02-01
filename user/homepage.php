@@ -16,31 +16,31 @@
           <div class="col-md-8 ml-auto mr-auto text-center" style="flex:1 ; max-width:100%;">
             <ul class="nav nav-pills nav-pills-rose">
               <li class="nav-item">
-                <a class="nav-link active" href="#pill1" data-toggle="tab">All</a>
+                <a class="nav-link active" data-toggle="tab">All</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill2" data-toggle="tab">Art</a>
+                <a class="nav-link" id="1" data-toggle="tab">Art</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill3" data-toggle="tab">Business</a>
+                <a class="nav-link" id="2" data-toggle="tab">Business</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill4" data-toggle="tab">Cultural</a>
+                <a class="nav-link" id="3" data-toggle="tab">Cultural</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill5" data-toggle="tab">Educational</a>
+                <a class="nav-link" id="4" data-toggle="tab">Educational</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill6" data-toggle="tab">MUN</a>
+                <a class="nav-link" id="5" data-toggle="tab">MUN</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill7" data-toggle="tab">Photography</a>
+                <a class="nav-link" id="6" data-toggle="tab">Photography</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill8" data-toggle="tab">Seminars</a>
+                <a class="nav-link" id="7" data-toggle="tab">Seminars</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill9" data-toggle="tab">Technical</a>
+                <a class="nav-link" id="8" data-toggle="tab">Technical</a>
               </li>
 
             </ul>
@@ -60,35 +60,7 @@
 
 
         <div class="row">
-          <!-- <div class="col-md-6 col-lg-4">
-            
-            <div class="rotating-card-container">
-              <div class="card card-rotate card-background">
-                <div class="front front-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
-                  <div class="card-body">
-                    <h6 class="card-category">Society name</h6>
-                    <a href="#pablo">
-                      <h3 class="card-title">Heading of Event</h3>
-                    </a>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                    </p>
-                  </div>
-                </div>
-                <div class="back back-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Manage Post
-                    </h5>
-                    <p class="card-description">As an Admin, you have shortcuts to edit, view or delete the posts.</p>
-                    <div class="footer text-center">
-                      <button class="btn btn-info btn-round">Read More</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div> -->
+
 
           <?php echo upcoming_events(); ?>
 
