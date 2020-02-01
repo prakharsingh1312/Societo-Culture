@@ -102,9 +102,9 @@ if(isset($_POST["submitannouncement"]))
                       </div>
                     </div>
 
-                    <button type="submit" class="btn btn-success pull-right">Post It!</button>
+                   
 
-                    <input type="submit" name="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
+                    <input type="submit" name="submitevent" class="btn btn-warning pull-right" value="Post It !"></input>
 
                     <div class="clearfix"></div>
                   </form>
@@ -155,9 +155,9 @@ if(isset($_POST["submitannouncement"]))
                       </div>
                     </div>
 
-                    <button type="submit" class="btn btn-warning pull-right">Announce!</button>
+                   
 
-                    <input type="submit" name="submitannouncement" class="btn btn-primary pull-right" value="Announce"></input>
+                    <input type="submit" name="submitannouncement" class="btn btn-success pull-right" value="Announce"></input>
 
                     <div class="clearfix"></div>
                   </form>
