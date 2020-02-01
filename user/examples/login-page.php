@@ -1,4 +1,11 @@
 <?php
+include("../../assets/php/functions.php");
+if(isset($_GET['login'])){
+	$username=mysqli_real_escape_string($dbconfig,$_POST['username']);
+	$password=mysqli_real_escape_string($dbconfig,$_POST['password']);
+	echo login_user($username,$password);
+}
+else{
 echo '<div class="page-header header-filter" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
@@ -42,6 +49,6 @@ echo '<div class="page-header header-filter" style="background-image: url(\'asse
       </div>
     </div>
     
-  </div>';
+  </div>';}
 ?>
  
