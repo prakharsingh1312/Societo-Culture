@@ -121,13 +121,6 @@ function showTask(){
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
-function showNotifs(){
-	$.get('notifications.php',function(data){
-		$('#wrapper').html(data);
-		linkChange('#header_notifs');
-		//$('#wrapper').loadingView({'state':false});
-	});
-}
 function bs_input_file() {
 	$(".input-file").before(
 		function() {
@@ -278,8 +271,7 @@ function hash()
 				showattendance();
 			else if(hash == 'task')
 				showTask();
-			else if(hash == 'notifs')
-				showNotifs();
+			
 			
 		}
 }
