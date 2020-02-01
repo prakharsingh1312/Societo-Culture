@@ -23,7 +23,7 @@
 
 <body class="blog-posts sidebar-collapse">
   <div id="ReplaceHere">
-  <?php include("homepage.php")?></div>
+  <?php include("homepage.php");?></div>
   <?php include("footer.php");?>
   <!--   Core JS Files   -->
   <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
