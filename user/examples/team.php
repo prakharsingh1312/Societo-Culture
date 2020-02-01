@@ -47,7 +47,7 @@ $societyid=$_GET["societyid"];
                 <ul class="navbar-nav ml-auto">
              
                     <li class="button-container nav-item iframe-extern">
-                        <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
+                        <a href="#" target="_blank" class="btn  btn-rose   btn-round btn-block">
                             <i class="material-icons"></i> Home
                         </a>
                     </li>
@@ -55,7 +55,7 @@ $societyid=$_GET["societyid"];
             </div>
         </div>
     </nav>
-    <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../assets/img/examples/clark-street-merc.jpg');">
+    <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../assets/img/examples/office2.jpg');">
         <div class="container">
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
@@ -90,7 +90,7 @@ $societyid=$_GET["societyid"];
     $result_user=mysqli_fetch_array($abc);
 $i++;
     echo "
-                    <div class='col-md-4'>
+                    <div class='col-md-3'>
                         <div class='team-player'>
                             <div class='card card-plain'>
                                 <div class='col-md-6 ml-auto mr-auto'>
