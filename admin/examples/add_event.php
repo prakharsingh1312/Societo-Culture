@@ -44,7 +44,7 @@ if(isset($_GET["submitannouncement"]))
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Society Name (FIXED)</label>
-                          <input type="text" class="form-control" value=" <?php echo $_SESSION['soc_name']; ?> " disabled>
+                          <input type="text" class="form-control " value=" <?php echo $_SESSION['soc_name']; ?> " disabled>
                         </div>
                       </div>
                       <div class="col-md-7">
@@ -77,7 +77,11 @@ if(isset($_GET["submitannouncement"]))
                       </div>
                       <div class="col-md-6">
                       <div class="form-group">
+<<<<<<< HEAD
                         <input type="file" class="custom-file-input bmd-label-floating" id="customFile" name="event_poster">
+=======
+                        <input type="file" class="custom-file-input" id="customFile">
+>>>>>>> d56a241add5f4f7dcc393bd839f21c61a79eb2b8
                         <label class="custom-file-label bmd-label-floating" for="customFile">Choose file</label> 
                       </div>
                     </div>
