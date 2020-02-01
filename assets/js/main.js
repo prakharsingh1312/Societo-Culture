@@ -114,10 +114,17 @@ function showattendance(){
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
-function showattendance(){
+function showTask(){
 	$.get('task.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#header_task');
+		//$('#wrapper').loadingView({'state':false});
+	});
+}
+function showNotifs(){
+	$.get('notifications.php',function(data){
+		$('#wrapper').html(data);
+		linkChange('#header_notifs');
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -271,6 +278,8 @@ function hash()
 				showattendance();
 			else if(hash == 'task')
 				showTask();
+			else if(hash == 'notifs')
+				showNotifs();
 			
 		}
 }
