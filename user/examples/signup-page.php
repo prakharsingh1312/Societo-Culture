@@ -14,13 +14,13 @@ else{
   <div id="notification_div"><div id="notification_inner_div"><div id="notification_inner_cell_div"></div></div></div>
     <div class="container">
       <div class="row">
-        <div class="col-md-10 ml-auto mr-auto">
+        <div class="col-lg-5 ml-auto mr-auto">
           <div class="card card-signup">
             <h2 class="card-title text-center">Register</h2>
             <div class="card-body">
               <div class="row">
                 
-                <div class="col-md-5">
+                <div class="col-xl-12">
                   <!-- <div class="social text-center">
                     <button class="btn btn-just-icon btn-round btn-twitter">
                       <i class="fa fa-twitter"></i>
