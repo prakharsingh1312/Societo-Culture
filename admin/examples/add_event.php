@@ -3,7 +3,7 @@
           <div class="row">
             <div class="col-md-8">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-success">
                   <h4 class="card-title">Adding Events to Publish</h4>
                   <p class="card-category">Enter the details of your event</p>
                 </div>
@@ -63,7 +63,7 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Post It!</button>
+                    <button type="submit" class="btn btn-success pull-right">Post It!</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="col-md-4">
               <div class="card">
-                <div class="card-header card-header-primary">
+                <div class="card-header card-header-warning">
                   <h4 class="card-title">Adding Announcements</h4>
                   <p class="card-category">Enter the details of the announcement</p>
                 </div>
@@ -119,7 +119,7 @@
                         </div>
                       </div>
                     </div>
-                    <button type="submit" class="btn btn-primary pull-right">Announce!</button>
+                    <button type="submit" class="btn btn-warning pull-right">Announce!</button>
                     <div class="clearfix"></div>
                   </form>
                 </div>
