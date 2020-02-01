@@ -60,9 +60,9 @@ function showtrack(){
 function showDash(){
 	//$('#wrapper').loadingView({'state':true});
 	$.get('dash.php',function(data){
-
+linkChange('#users_dashboard');
 		$('#wrapper').html(data);
-		linkChange('#users_dash');
+		
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -158,6 +158,8 @@ $(document).ready( function()
 	//Admin panel buttons
 	//Department
 		$(document).on('click','#show_add_dept_button',function(){ showAddDept(); });
+		$(document).on('submit','#event_form',function(){ var data=form_submit("#event_form","add_event.php?submitevent"); });
+		$(document).on('submit','#announcement_form',function(){ var data=form_submit("#announcement_form","add_event.php?submitannouncement"); });
 		$(document).on('click','.add_dept_button',function(){ addDept(); });
 		$(document).on('click','.dept_show_edit_button',function(){
 			var array = this.id.split(':');
@@ -525,3 +527,34 @@ function showDeleteUser(name,id){
 		$('#modal-content').loadingView({'state':false});
 
 }
+function form_submit(id,url){
+	var form=$(id)[0];
+	var formdata=new FormData(form);
+		//$("#submitForm").prop("disabled", true);
+			//$('#form1').loadingView({'state':true});
+        $.ajax({
+            type: "POST",
+            enctype: 'multipart/form-data',
+            url: url,
+            data: formdata,
+            processData: false,
+            contentType: false,
+            cache: false,
+            timeout: 600000,
+            success: function (data) {
+				//$('#container').html(data);
+				//$("#btnSubmit").prop("disabled", false);
+				//$('#form1').loadingView({'state':false});
+				 console.log("success : ", data);
+				return data;
+            },
+            error: function (e) {
+
+                form_error('Error submitting form please try again.','#submitForm')
+                console.log("ERROR : ", e);
+               // $("#btnSubmit").prop("disabled", false);
+				//$('#form1').loadingView({'state':false});
+
+            }
+		});
+	}
