@@ -1,17 +1,4 @@
-<!--
- =========================================================
- Material Kit PRO - v2.2.0
- =========================================================
 
- Product Page: https://www.creative-tim.com/product/material-kit-pro
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
- Coded by Creative Tim
-
- =========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,7 +21,7 @@
   <link href="../assets/demo/vertical-nav.css" rel="stylesheet" />
 </head>
 
-<body class="landing-page sidebar-collapse">
+<body class="pricing sidebar-collapse">
   <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
@@ -148,165 +135,69 @@
       </div>
     </div>
   </nav>
-  <div class="page-header header-filter" data-parallax="true" style="background-image: url('../assets/img/bg8.jpg')">
+  <div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('../assets/img/bg2.jpg');">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <h1 class="title">Your Story Starts With Us.</h1>
-          <h4>Every landing page needs a small description after the big bold title, that&apos;s why we added this text here. Add here all the information that can make you or your product create the first impression.</h4>
-          <br>
-          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="btn btn-danger btn-raised btn-lg">
-            <i class="fa fa-play"></i> Watch video
-          </a>
+        <div class="col-md-8 ml-auto mr-auto text-center">
+          <h1 class="title">SOCIETIES AND CLUBS</h1>
+          <h3>A total of <span style="font-size: 2.3rem; font-weight: 500;" class="number-counter" data-count-from="0" data-count-to="32" data-count-speed="30"></span> societies enrolled.</h3>
         </div>
       </div>
     </div>
   </div>
   <div class="main main-raised">
     <div class="container">
-      <div class="section text-center">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="title">Let&apos;s talk product</h2>
-            <h5 class="description">This is the paragraph where you can write more details about your product. Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious, otherwise he wouldn&apos;t scroll to get here. Add a button if you want the user to see more.</h5>
-          </div>
-        </div>
-        <div class="features">
+      <div class="team-2" id="team-2">
+        <div class="container">
           <div class="row">
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-info">
-                  <i class="material-icons">chat</i>
+
+            <?php
+include("../../assets/php/dbconfig.php");
+
+
+    
+  $query1="SELECT * FROM society_table";
+  $sq1=mysqli_query($dbconfig,$query1);
+     while($row=mysqli_fetch_array($sq1))
+     {
+      echo 
+      "
+
+            <div class='col-md-6 col-lg-4'>
+              <div class='card card-profile card-plain'>
+                <div class='card-header card-header-image'>
+                  
+                    <img class='img' src=' ".$row['so_logo']." '>
+                  
                 </div>
-                <h4 class="info-title">Free Chat</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
+                <div class='card-body'>
+                  <h4 class='card-title'>".$row['so_abbr']."</h4>
+                  <h6 class='card-category text-muted'>".$row['so_name']."</h6>
+                </div>
+
+                <a href='team.php?societyid=".$row['so_id']."'> <button class='btn btn-primary-small'> View Team </button> </a>
+
+                <div class='card-footer justify-content-center'>
+                  <a href='#pablo' class='btn btn-just-icon btn-dribbble btn-round'><i class='fa fa-dribbble'></i></a>
+                  <a href='#pablo' class='btn btn-just-icon btn-twitter btn-round'><i class='fa fa-facebook'></i></a>
+                  <a href='#pablo' class='btn btn-just-icon btn-twitter btn-round'><i class='fa fa-instagram'></i></a>
+                </div>
               </div>
             </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-success">
-                  <i class="material-icons">verified_user</i>
-                </div>
-                <h4 class="info-title">Verified Users</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="info">
-                <div class="icon icon-danger">
-                  <i class="material-icons">fingerprint</i>
-                </div>
-                <h4 class="info-title">Fingerprint</h4>
-                <p>Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough.</p>
-              </div>
-            </div>
+      
+      ";
+     } 
+?>
           </div>
-        </div>
-      </div>
-      <div class="section text-center">
-        <h2 class="title">Here is our team</h2>
-        <div class="team">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Gigi Hadid <br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/christian.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Christian Louboutin<br>
-                    <small class="card-description text-muted">Designer</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="team-player">
-                <div class="card card-plain">
-                  <div class="col-md-6 ml-auto mr-auto">
-                    <img src="../assets/img/faces/kendall.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
-                  </div>
-                  <h4 class="card-title">Kendall Jenner<br>
-                    <small class="card-description text-muted">Model</small>
-                  </h4>
-                  <div class="card-body">
-                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                  </div>
-                  <div class="card-footer justify-content-center">
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section section-contacts">
-        <div class="row">
-          <div class="col-md-8 ml-auto mr-auto">
-            <h2 class="text-center title">Work with us</h2>
-            <h4 class="text-center description">Divide details about your product or agency work into parts. Write a few lines about each one and contact us about any further collaboration. We will responde get back to you in a couple of hours.</h4>
-            <form class="contact-form">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Name</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Your Email</label>
-                    <input type="email" class="form-control">
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="exampleMessage" class="bmd-label-floating">Your Message</label>
-                <textarea type="email" class="form-control" rows="4" id="exampleMessage"></textarea>
-              </div>
-              <div class="row">
-                <div class="col-md-4 ml-auto mr-auto text-center">
-                  <button class="btn btn-primary btn-raised">
-                    Send Message
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
+         
+
+
+
         </div>
       </div>
     </div>
   </div>
-  <footer class="footer footer-default">
+  <footer class="footer">
     <div class="container">
       <nav class="float-left">
         <ul>
@@ -369,6 +260,38 @@
   <script src="../assets/demo/demo.js" type="text/javascript"></script>
   <!-- Control Center for Material Kit: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/material-kit.js?v=2.2.0" type="text/javascript"></script>
+  <script type="text/javascript">(function($) {
+  $.fn.countTo = function(options) {
+    return this.each(function() {
+      //-- Arrange
+      var FRAME_RATE = 60; // Predefine default frame rate to be 60fps
+      var $el = $(this);
+      var countFrom = parseInt($el.attr('data-count-from'));
+      var countTo = parseInt($el.attr('data-count-to'));
+      var countSpeed = $el.attr('data-count-speed'); // Number increment per second
+
+      //-- Action
+      var rafId;
+      var increment;
+      var currentCount = countFrom;
+      var countAction = function() {              // Self looping local function via requestAnimationFrame
+        if(currentCount < countTo) {              // Perform number incremeant
+          $el.text(Math.floor(currentCount));     // Update HTML display
+          increment = countSpeed / FRAME_RATE;    // Calculate increment step
+          currentCount += increment;              // Increment counter
+          rafId = requestAnimationFrame(countAction);
+        } else {                                  // Terminate animation once it reaches the target count number
+          $el.text(countTo);                      // Set to the final value before everything stops
+          //cancelAnimationFrame(rafId);
+        }
+      };
+      rafId = requestAnimationFrame(countAction); // Initiates the looping function
+    });
+  };
+}(jQuery));
+
+//-- Executing
+$('.number-counter').countTo();</script>
 </body>
 
 </html>
