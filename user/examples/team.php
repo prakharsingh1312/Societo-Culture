@@ -47,7 +47,7 @@ $societyid=$_GET["societyid"];
                 <ul class="navbar-nav ml-auto">
              
                     <li class="button-container nav-item iframe-extern">
-                        <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
+                        <a href="../#home"  class="btn  btn-rose   btn-round btn-block">
                             <i class="material-icons"></i> Home
                         </a>
                     </li>
