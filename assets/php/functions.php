@@ -7,6 +7,7 @@ function create_user($name,$username,$useremail,$usermob,$password){
 	$query="INSERT into user_table (user_name,user_uname,user_email,user_mobile,user_password) VALUES('$name','$username','$useremail','$usermob','$password')";
 	$sq=mysqli_query($dbconfig,$query);
 	if($sq) return 1;
+	else return $query;
 }
 
 function login_user($username,$password){
