@@ -1,4 +1,5 @@
-<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
+<?php 
+echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit-pro/index.html">
@@ -35,4 +36,30 @@
         </ul>
       </div>
     </div>
+
   </nav>
+
+  <nav id="cd-vertical-nav">
+    <ul>
+      <li>
+        <a href="#buttons" data-number="1">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Upcoming Events</span>
+        </a>
+      </li>
+      <li>
+        <a href="#navigation" data-number="2">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Announcements</span>
+        </a>
+      </li>
+      <li>
+        <a href="#notifications" data-number="3">
+          <span class="cd-dot"></span>
+          <span class="cd-label">Past Events</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</nav>';
+?>
