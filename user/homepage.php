@@ -1,4 +1,16 @@
-<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('assets/img/bg10.jpg');">
+<?php include('../assets/php/functions.php');
+	if(isset($_GET['filter_tag'])){
+		$id=mysqli_real_escape_string($dbconfig,$_POST['id']);
+		if($id=="all"){
+			echo upcoming_events();
+		}
+		else
+	echo filter_events_by_tag($id);
+	}
+	else 
+	{
+		echo'
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url(\'assets/img/bg10.jpg\');">
     <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
@@ -15,32 +27,32 @@
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center" style="flex:1 ; max-width:100%;">
             <ul class="nav nav-pills nav-pills-rose">
-              <li class="nav-item">
-                <a class="nav-link active" data-toggle="tab">All</a>
+              <li class="nav-item filter_tag" id="all">
+                <a class="nav-link active"  data-toggle="tab">All</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="1" data-toggle="tab">Art</a>
+              <li class="nav-item filter_tag" id="1">
+                <a class="nav-link "  data-toggle="tab">Art</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="2" data-toggle="tab">Business</a>
+              <li class="nav-item filter_tag" id="2">
+                <a class="nav-link "  data-toggle="tab">Business</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="3" data-toggle="tab">Cultural</a>
+              <li class="nav-item filter_tag" id="3">
+                <a class="nav-link "  data-toggle="tab">Cultural</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="4" data-toggle="tab">Educational</a>
+              <li class="nav-item filter_tag" id="4">
+                <a class="nav-link "  data-toggle="tab">Educational</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="5" data-toggle="tab">MUN</a>
+              <li class="nav-item filter_tag" id="5">
+                <a class="nav-link "  data-toggle="tab">MUN</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="6" data-toggle="tab">Photography</a>
+              <li class="nav-item filter_tag" id="6">
+                <a class="nav-link "  data-toggle="tab">Photography</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="7" data-toggle="tab">Seminars</a>
+              <li class="nav-item filter_tag" id="7">
+                <a class="nav-link "  data-toggle="tab">Seminars</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" id="8" data-toggle="tab">Technical</a>
+              <li class="nav-item filter_tag" id="8">
+                <a class="nav-link "  data-toggle="tab">Technical</a>
               </li>
 
             </ul>
@@ -59,11 +71,12 @@
         </div>
 
 
-        <div class="row">
+        <div class="row" id="modal-content">
 
+';
 
-          <?php echo upcoming_events(); ?>
-
+			echo upcoming_events(); 
+echo'
 
 
         </div>
@@ -78,11 +91,11 @@
                 <div class="media-area">
                     <h3 class="title text-center">Announcements</h3>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
+                        <div class="carousel-inner" id="announce">';
 
-                         <?php echo show_announcements(); ?>
+                          echo show_announcements(); 
 
-                            <div class="carousel-item active">
+                           echo ' <div class="carousel-item active">
                                 <div class="media" style="padding:0% 10% 0% 10%;">
                                     <a class="float-left" href="#pablo">
                                         <div class="avatar">
@@ -125,24 +138,10 @@
         </div>
     </div>
     <h3 class="title text-center">Past Events</h3>
-    <div class="row" style="padding:10px 0;">
+    <div class="row" id="past" style="padding:10px 0;">';
 
-      <?php echo past_events(); ?>
-
-<!--     <div class="col-md-6 ml-auto mr-auto">
-      <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
-        <div class="card-body">
-                <h6 class="card-category text-info">Materials</h6>
-                <h3 class="card-title">The Sculpture Where Details Matter</h3>
-                <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                </p>
-                <a href="#pablo" class="btn btn-danger btn-round">
-                  <i class="material-icons">subject</i> Read Article
-                </a>
-              </div>
-            </div>
-    </div> -->
+       echo past_events();
+echo'
 
 </div>
-</div>
+</div>';}?>

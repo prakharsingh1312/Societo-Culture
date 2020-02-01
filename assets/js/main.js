@@ -14,6 +14,7 @@ function showHome(){
 
 	});
 }
+
 function showSignup(){
 	$('#ReplaceHere').loadingView({'state':true});
 	$.get('examples/signup-page.php',function(data){
@@ -152,6 +153,8 @@ $(document).ready( function()
 	//Forms
 		$(document).on('click','.login_button',function(){ dologin(); });
 		$(document).on('click','.signup_button',function(){ signup(); });
+		$(document).on('click','.filter_tag',function(){ var id=this.id.split(':');
+														filter(id[0]); });
 	//Admin panel buttons
 	//Department
 		$(document).on('click','#show_add_dept_button',function(){ showAddDept(); });
@@ -244,12 +247,14 @@ function dologin(){
 	$.post('examples/login-page.php?login',{username:username,password:password},function(data){
 		if(data==1){
 			notify('Logging In',4,'success');
-			showAdmin()
+			
 		}
 		else if (data==0)
 			notify('Incorrect Username/Password',4,'danger');
 		else if (data==-1)
-			notify('User does not exist.',4,'danger')
+			notify('User does not exist.',4,'danger');
+		else
+			notify(data,4,'danger');
 	})}
 
 function notify(text, time,type)
@@ -292,62 +297,14 @@ function notify(text, time,type)
 		}
 
 }}
-
-function hide_input(id){
-	$(id).attr("value","");
-	$(id).attr('style','pointer-events:none;opacity:.5;')
+function filter(id){
+	$('#modal-content').loadingView({'state':true});
+	$.post('homepage.php?filter_tag',{id:id},function(data){
+		$('#modal-content').html(data);
+		console.log(data);
+		$('#modal-content').loadingView({'state':false});
+	});
 }
-function show_input(id){
-	$(id).removeAttr('style');
-}
-function input_focus(id)
-{
-	if(offclick_event == 'touchend')
-	{
-		$('input').blur();
-	}
-	if(typeof id != 'undefined')
-	{
-		$(id).focus();
-	}
-}
-function form1_submit(){
-	var form=$('#form1')[0];
-	var formdata=new FormData(form);
-	
-		if(validate_number(formdata.get('roll'),8)){
-		$("#submitForm").prop("disabled", true);
-			$('#form1').loadingView({'state':true});
-        $.ajax({
-            type: "POST",
-            enctype: 'multipart/form-data',
-            url: "form1.php?submit_form",
-            data: formdata,
-            processData: false,
-            contentType: false,
-            cache: false,
-            timeout: 600000,
-            success: function (data) {
-				$('#container').html(data);
-				$("#btnSubmit").prop("disabled", false);
-				$('#form1').loadingView({'state':false});
-
-            },
-            error: function (e) {
-
-                form_error('Error submitting form please try again.','#submitForm')
-                console.log("ERROR : ", e);
-                $("#btnSubmit").prop("disabled", false);
-				$('#form1').loadingView({'state':false});
-
-            }
-		});
-		}
-		else{
-			form_error('Roll no. format incorrect.','#form1_roll')
-		}
-	}
-	
 function logout(){
 	$.get('../login.php?logout',function(data){
 		if (data==1)

@@ -1,17 +1,13 @@
-<!--
- =========================================================
- Material Kit PRO - v2.2.0
- =========================================================
+<?php
+include("dbconfig.php");
+$eventid=$GET["eventid"];
 
- Product Page: https://www.creative-tim.com/product/material-kit-pro
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
+  $query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' ";
+  $sq=mysqli_query($dbconfig,$query);
+  $row=mysqli_fetch_array($sq);
 
- Coded by Creative Tim
 
- =========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,53 +45,7 @@
       </div>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto">
-          
-          
-<!--
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">view_carousel</i> Examples
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../examples/about-us.html" class="dropdown-item">
-                <i class="material-icons">account_balance</i> About Us
-              </a>
-              <a href="../examples/blog-post.html" class="dropdown-item">
-                <i class="material-icons">art_track</i> Blog Post
-              </a>
-              <a href="../examples/blog-posts.html" class="dropdown-item">
-                <i class="material-icons">view_quilt</i> Blog Posts
-              </a>
-              <a href="../examples/contact-us.html" class="dropdown-item">
-                <i class="material-icons">location_on</i> Contact Us
-              </a>
-              <a href="../examples/landing-page.html" class="dropdown-item">
-                <i class="material-icons">view_day</i> Landing Page
-              </a>
-              <a href="../examples/login-page.html" class="dropdown-item">
-                <i class="material-icons">fingerprint</i> Login Page
-              </a>
-              <a href="../examples/pricing.html" class="dropdown-item">
-                <i class="material-icons">attach_money</i> Pricing Page
-              </a>
-              <a href="../examples/shopping-cart.html" class="dropdown-item">
-                <i class="material-icons">shopping_basket</i> Shopping Cart
-              </a>
-              <a href="../examples/ecommerce.html" class="dropdown-item">
-                <i class="material-icons">store</i> Ecommerce Page
-              </a>
-              <a href="../examples/product-page.html" class="dropdown-item">
-                <i class="material-icons">shopping_cart</i> Product Page
-              </a>
-              <a href="../examples/profile-page.html" class="dropdown-item">
-                <i class="material-icons">account_circle</i> Profile Page
-              </a>
-              <a href="../examples/signup-page.html" class="dropdown-item">
-                <i class="material-icons">person_add</i> Signup Page
-              </a>
-            </div>
-          </li>
--->
+
           <li class="button-container nav-item iframe-extern">
             <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
               <i class="material-icons"></i> Back
@@ -111,27 +61,9 @@
     <div class="container">
       <div class="main main-raised main-product">
         <div class="row">
+          
           <div class="col-md-6 col-sm-6">
-            <div class="tab-content">
-<!--
-              <div class="tab-pane" id="product-page1">
-                <img src="../assets/img/examples/product1.jpg">
-              </div>
--->
-              <div class="tab-pane active" id="product-page2">
-                <img src="../assets/img/examples/product2.jpg">
-              </div>
-              <div class="tab-pane" id="product-page3">
-                <img src="../assets/img/examples/product3.jpg">
-              </div>
-              <div class="tab-pane" id="product-page4">
-                <img src="../assets/img/examples/product4.jpg">
-              </div>
-            </div>
-           
-          </div>
-          <div class="col-md-6 col-sm-6">
-            <h2 class="title"> Event Name </h2>
+            <h2 class="title"> <?php echo $row["event_name"]; ?> </h2>
             
             <div id="accordion" role="tablist">
               <div class="card card-collapse">

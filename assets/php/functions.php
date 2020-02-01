@@ -13,7 +13,7 @@ function create_user($name,$username,$useremail,$usermob,$password){
 function login_user($username,$password){
 	global $dbconfig;
 	$password=md5($password);
-	$query="SELECT * FROM user_table WHERE user_name='$username'";
+	$query="SELECT * FROM user_table WHERE user_uname='$username'";
 	$sq=mysqli_query($dbconfig,$query);
 	$row=mysqli_fetch_array($sq);
 	if(!empty($row))
@@ -116,13 +116,10 @@ function past_events(){
 
 function filter_events_by_tag($tagvalue){
 	global $dbconfig;
-	$temp=$tagvalue; $content='';
-	for($i=0;$i<strlen($tagvalue);$i++)
-	{
-		$reqtag=$tagvalue[i];
-
+	 $content='';
+		$reqtag=$tagvalue;
 		$query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' AND event_tags like '%".$reqtag."%' ORDER BY DATE(event_date)";
-		$sq=mysqli_query($dbconfig,$query_get_society);
+		$sq=mysqli_query($dbconfig,$query);
 		while($row=mysqli_fetch_array($sq)){
 		$eventname=$row['event_name'];
 		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
@@ -131,7 +128,7 @@ function filter_events_by_tag($tagvalue){
 		$eventdate=DATE($row['event_date']);
 
 		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
-		$abc=mysqli_query($dbconfig,$query);
+		$abc=mysqli_query($dbconfig,$query_get_society);
 		$result_society=mysqli_fetch_array($abc);
 
 		$societyname=$result_society['so_name'];
@@ -167,7 +164,7 @@ function filter_events_by_tag($tagvalue){
           </div>";
 	}
 
-	}
+	
 	return $content;
 }
 

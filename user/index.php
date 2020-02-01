@@ -1,4 +1,3 @@
-<?php include("../assets/php/functions.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 
