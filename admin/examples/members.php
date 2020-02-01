@@ -121,7 +121,7 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Department</label>
-                          <select name="addmemdept" class="form-control" required>
+                          <select name="addmemdept"  class="form-control" required>
                             <option disabled> Select Role </option>
                          
 <?php
