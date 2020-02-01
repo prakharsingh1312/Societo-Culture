@@ -21,9 +21,7 @@
                         <th>
                           Name
                         </th>
-                         <th>
-                          
-                        </th>
+            
                          <th>
                           Phone Number
                         </th>
@@ -40,7 +38,7 @@
                           <td>
                             jhaejhd
                           </td>
-                          <td class="text-primary">
+                          <td class="text-primary " >
                             36,738
                           </td>
                         </tr>
