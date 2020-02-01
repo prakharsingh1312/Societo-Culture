@@ -176,6 +176,7 @@ $(document).ready( function()
 		$(document).on('click','#show_add_dept_button',function(){ showAddDept(); });
 		$(document).on('submit','#event_form',function(){ var data=form_submit("#event_form","add_event.php?submitevent"); });
 		$(document).on('submit','#dept_form',function(){ var data=form_submit("#dept_form","add_dept.php?add_dept"); });
+		$(document).on('submit','#profile_form',function(){ var data=form_submit("#profile_form","user.php?update_user"); });
 		$(document).on('submit','#announcement_form',function(){ var data=form_submit("#announcement_form","add_event.php?submitannouncement"); });
 		$(document).on('click','.add_dept_button',function(){ addDept(); });
 		$(document).on('click','.dept_show_edit_button',function(){
@@ -565,7 +566,7 @@ function form_submit(id,url){
 				//$("#btnSubmit").prop("disabled", false);
 				//$('#form1').loadingView({'state':false});
 				 console.log("success : ", data);
-				location.reload();
+				//location.reload();
 				return data;
 				
             },
