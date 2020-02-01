@@ -222,12 +222,12 @@ function filter_events_by_society($societyid){
 	return $content;
 }
 
-function upload_file($file,$subpath,$responsecode){
+function upload_file($file){
     $name = $file["name"];
     $ext = end((explode(".", $name)));
-    $path=$subpath.''.$response_code.'.'.$ext;
+    $path='assets/img/'.$name.'.'.$ext;
     $file=$file['tmp_name'];
-    move_uploaded_file($file,'../uploads/'.$path);
+    move_uploaded_file($file,'../../user/'.$path);
     return $path;
 }
 
