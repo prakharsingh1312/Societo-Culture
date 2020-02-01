@@ -10,6 +10,8 @@
   <div class="main main-raised">
     <div class="container">
       <div class="section">
+        <h3 class="title text-center">Upcoming Events</h3>
+
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center" style="flex:1 ; max-width:100%;">
             <ul class="nav nav-pills nav-pills-rose">
@@ -56,7 +58,6 @@
           </div>
         </div>
 
-        <h3 class="title text-center">Upcoming Events</h3>
 
         <div class="row">
           <div class="col-md-6 col-lg-4">
@@ -145,7 +146,7 @@
     </div>
     <h3 class="title text-center">Past Events</h3>
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 ml-auto mr-auto">
       <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
         <div class="card-body">
                 <h6 class="card-category text-info">Materials</h6>
