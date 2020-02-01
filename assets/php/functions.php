@@ -1,23 +1,256 @@
 <?php
 include("dbconfig.php");
+
 function create_user($name,$username,$useremail,$usermob,$password){
+	global $dbconfig;
 	$password=md5($password);
 	$query="INSERT into user_table (user_name,user_uname,user_email,user_mobile,user_password) VALUES('$name','$username','$useremail','$usermob','$password')";
 	$sq=mysqli_query($dbconfig,$query);
 	if($sq) return 1;
 }
+
 function login_user($username,$password){
+	global $dbconfig;
 	$password=md5($password);
-	$lq="SELECT * FROM user_table WHERE user_name='$username'";
-	$sq=mysqli_query($con,$lq);
+	$query="SELECT * FROM user_table WHERE user_name='$username'";
+	$sq=mysqli_query($dbconfig,$query);
 	$row=mysqli_fetch_array($sq);
 	if(!empty($row))
 	{
-		if (row['user_password'] == $password) {
+		if ($row['user_password'] == $password) {
 			return 1;
 		}
 		else return 0;
 	}
 	else return -1;
 }
+
+function upcoming_events(){
+	global $dbconfig;
+	$content='';
+	$query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' ";
+	$sq=mysqli_query($dbconfig,$query);
+	while($row=mysqli_fetch_array($sq)){
+		$eventname=$row['event_name'];
+		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
+		$posterpath=$row['event_poster'];
+		$societyid=$row['society_id'];
+		
+		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
+		$abc=mysqli_query($dbconfig,$query);
+		$result_society=mysqli_fetch_array($abc);
+
+		$societyname=$result_society['so_name'];
+		$logopath=$reult_society['so_logo'];
+
+
+		$content.="<div class='col-md-6 col-lg-4'>
+            <div class='rotating-card-container'>
+              <div class='card card-rotate card-background'>
+                <div class='front front-background' style='background-image: url('".$posterpath."');'>
+                  <div class='card-body'>
+                    <h6 class='card-category'>Society name</h6>
+                    <a href='#pablo'>
+                      <h3 class='card-title'>".$eventname."</h3>
+                    </a>
+                    <p class='card-description'>
+                     ".$eventdesc."
+                    </p>
+                  </div>
+                </div>
+                <div class='back back-background' style='background-image: url('".$posterpath."');'>
+                  <div class='card-body'>
+                    <img src='".$logopath."' style='object-fit: contain'/>
+                    
+                    <div class='footer text-center'>
+                      <button class='btn btn-info btn-round'>Explore</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>";
+	}
+	return $content;
+}
+
+
+function past_events(){
+	global $dbconfig;
+	$content='';
+	$query="SELECT * FROM events_table WHERE DATE(event_date) < DATE(NOW())  AND event_type='1' ORDER BY DATE(event_date) DESC";
+	$sq=mysqli_query($dbconfig,$query);
+	while($row=mysqli_fetch_array($sq)){
+		$eventname=$row['event_name'];
+		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,150); $eventdesc.='...';
+		$posterpath=$row['event_poster'];
+		$societyid=$row['society_id'];
+		$eventdate=DATE($row['event_date']);
+
+		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
+		$abc=mysqli_query($dbconfig,$query);
+		$result_society=mysqli_fetch_array($abc);
+
+		$societyname=$result_society['so_name'];
+		$logopath=$reult_society['so_logo'];
+
+
+		$content.="<div class='col-md-6'>
+                    <div class='card card-background' style='background-image: url('".$posterpath."');'>
+                        <div class='card-body'>
+                            <h6 class='card-category text-info'>".$societyname."</h6>
+                            <a href='#pablo'>
+                                <h3 class='card-title'>".$eventname."</h3>
+                            </a>
+                            <p class='card-description'>
+                                ".$eventdesc."
+                            </p>
+                             <h4 class='card-title'> ".$eventdate." </h4>
+                        </div>
+                    </div>
+                </div>";
+	}
+	return $content;
+}
+
+function filter_events_by_tag($tagvalue){
+	global $dbconfig;
+	$temp=$tagvalue; $content='';
+	for($i=0;$i<strlen($tagvalue);$i++)
+	{
+		$reqtag=$tagvalue[i];
+
+		$query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' AND event_tags like '%".$reqtag."%' ORDER BY DATE(event_date)";
+		$sq=mysqli_query($dbconfig,$query);
+		while($row=mysqli_fetch_array($sq)){
+		$eventname=$row['event_name'];
+		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
+		$posterpath=$row['event_poster'];
+		$societyid=$row['society_id'];
+		$eventdate=DATE($row['event_date']);
+
+		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
+		$abc=mysqli_query($dbconfig,$query);
+		$result_society=mysqli_fetch_array($abc);
+
+		$societyname=$result_society['so_name'];
+		$logopath=$reult_society['so_logo'];
+
+
+		$content.="<div class='col-md-6 col-lg-4'>
+            <div class='rotating-card-container'>
+              <div class='card card-rotate card-background'>
+                <div class='front front-background' style='background-image: url('".$posterpath."');'>
+                  <div class='card-body'>
+                    <h6 class='card-category'>".$societyname."</h6>
+                    <a href='#pablo'>
+                      <h3 class='card-title'>".$eventname."</h3>
+                    </a>
+                    <p class='card-description'>
+                     ".$eventdesc."
+                    </p>
+                    <h4 class='card-title'> ".$eventdate." </h4>
+                  </div>
+                </div>
+                <div class='back back-background' style='background-image: url('".$posterpath."');'>
+                  <div class='card-body'>
+                    <img src='".$logopath."' style='object-fit: contain'/>
+                    
+                    <div class='footer text-center'>
+                      <button class='btn btn-info btn-round'>Explore</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>";
+	}
+
+	}
+	return $content;
+}
+
+function filter_events_by_society($societyid){
+	global $dbconfig;
+	$content='';
+	$query="SELECT * FROM events_table WHERE society_id = ' ".$societyid." '  AND event_type='1'  ";
+	$sq=mysqli_query($dbconfig,$query);
+	while($row=mysqli_fetch_array($sq)){
+		$eventname=$row['event_name'];
+		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,100); $eventdesc.='...';
+		$posterpath=$row['event_poster'];
+		$societyid=$row['society_id'];
+		$eventdate=DATE($row['event_date']);
+
+		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
+		$abc=mysqli_query($dbconfig,$query_get_society);
+		$result_society=mysqli_fetch_array($abc);
+
+		$societyname=$result_society['so_name'];
+		$logopath=$reult_society['so_logo'];
+
+
+		$content.="<div class='col-md-6'>
+                    <div class='card card-background' style='background-image: url('".$posterpath."');'>
+                        <div class='card-body'>
+                            <h6 class='card-category text-info'>".$societyname."</h6>
+                            <a href='#pablo'>
+                                <h3 class='card-title'>".$eventname."</h3>
+                            </a>
+                            <p class='card-description'>
+                                ".$eventdesc."
+                            </p>
+                             <h4 class='card-title'> ".$eventdate." </h4>
+                        </div>
+                    </div>
+                </div>";
+	}
+	return $content;
+}
+
+function upload_file($file,$subpath,$responsecode){
+    $name = $file["name"];
+    $ext = end((explode(".", $name)));
+    $path=$subpath.''.$response_code.'.'.$ext;
+    $file=$file['tmp_name'];
+    move_uploaded_file($file,'../uploads/'.$path);
+    return $path;
+}
+
+function show_announcements(){
+	global $dbconfig;
+	$content='';
+	$query="SELECT * FROM events_table WHERE event_type='2' ORDER BY event_time DESC";
+	$sq=mysqli_query($dbconfig,$query);
+	while($row=mysqli_fetch_array($sq)){
+		$eventname=$row['event_name'];
+		$eventdesc=$row['event_des']; $eventdesc = substr($eventdesc,0,250);
+		$posterpath=$row['event_poster'];
+		$societyid=$row['society_id'];
+		
+		$query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
+		$abc=mysqli_query($dbconfig,$query);
+		$result_society=mysqli_fetch_array($abc);
+
+		$societyname=$result_society['so_name'];
+		$logopath=$reult_society['so_logo'];
+
+
+		$content.="<div class='carousel-item'>
+                                <div class='media' style='padding:0% 10% 0% 10%;'>
+                                    <a class='float-left' href='#pablo'>
+                                        <div class='avatar'>
+                                            <img class='media-object' src='".$logopath."' alt='...'>
+                                        </div>
+                                    </a>
+                                    <div class='media-body'>
+                                        <h4 class='media-heading'>".$societyname." <small>&#xB7; Just Now </small></h4>
+                                        <p>".$eventdesc."</p>
+                                    </div>
+                                </div>
+                            </div>";
+	}
+	return $content;
+}
+
 ?>

@@ -9,36 +9,38 @@
   </div>
   <div class="main main-raised">
     <div class="container">
-      <div class="section">
+      <div class="section" style="padding:10px 0;">
+        <h3 class="title text-center">Upcoming Events</h3>
+
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center" style="flex:1 ; max-width:100%;">
             <ul class="nav nav-pills nav-pills-rose">
               <li class="nav-item">
-                <a class="nav-link active" href="#pill1" data-toggle="tab">All</a>
+                <a class="nav-link active" data-toggle="tab">All</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill2" data-toggle="tab">Art</a>
+                <a class="nav-link" id="1" data-toggle="tab">Art</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill3" data-toggle="tab">Business</a>
+                <a class="nav-link" id="2" data-toggle="tab">Business</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill4" data-toggle="tab">Cultural</a>
+                <a class="nav-link" id="3" data-toggle="tab">Cultural</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill5" data-toggle="tab">Educational</a>
+                <a class="nav-link" id="4" data-toggle="tab">Educational</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill6" data-toggle="tab">MUN</a>
+                <a class="nav-link" id="5" data-toggle="tab">MUN</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill7" data-toggle="tab">Photography</a>
+                <a class="nav-link" id="6" data-toggle="tab">Photography</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill8" data-toggle="tab">Seminars</a>
+                <a class="nav-link" id="7" data-toggle="tab">Seminars</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#pill9" data-toggle="tab">Technical</a>
+                <a class="nav-link" id="8" data-toggle="tab">Technical</a>
               </li>
 
             </ul>
@@ -55,35 +57,15 @@
             </div>
           </div>
         </div>
+
+
         <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <div class="rotating-card-container">
-              <div class="card card-rotate card-background">
-                <div class="front front-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
-                  <div class="card-body">
-                    <h6 class="card-category">Society name</h6>
-                    <a href="#pablo">
-                      <h3 class="card-title">Heading of Event</h3>
-                    </a>
-                    <p class="card-description">
-                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                    </p>
-                  </div>
-                </div>
-                <div class="back back-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
-                  <div class="card-body">
-                    <h5 class="card-title">
-                      Manage Post
-                    </h5>
-                    <p class="card-description">As an Admin, you have shortcuts to edit, view or delete the posts.</p>
-                    <div class="footer text-center">
-                      <button class="btn btn-info btn-round">Read More</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+
+
+          <?php echo upcoming_events(); ?>
+
+
+
         </div>
       </div>
     </div>
@@ -97,6 +79,9 @@
                     <h3 class="title text-center">Announcements</h3>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
+
+                         <?php echo show_announcements(); ?>
+
                             <div class="carousel-item active">
                                 <div class="media" style="padding:0% 10% 0% 10%;">
                                     <a class="float-left" href="#pablo">
@@ -105,21 +90,21 @@
                                         </div>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                        <h4 class="media-heading">Raghav <small>&#xB7; 1 hour ago</small></h4>
                                         <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                                         <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="media">
+                                <div class="media" style="padding:0% 10% 0% 10%;">
                                     <a class="float-left" href="#pablo">
                                         <div class="avatar">
                                             <img class="media-object" src="./assets/img/faces/avatar.jpg" alt="...">
                                         </div>
                                     </a>
-                                    <div class="media-body" style="padding:0% 10% 0% 10%;">
-                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 2 hours ago</small></h4>
                                         <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                                         <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
                                     </div>
@@ -139,42 +124,25 @@
             </div>
         </div>
     </div>
+    <h3 class="title text-center">Past Events</h3>
+    <div class="row" style="padding:10px 0;">
 
+      <?php echo past_events(); ?>
 
-
-    <div class="subscribe-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="title">Get Tips &amp; Tricks every Week!</h3>
-            <p class="description">
-              Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <div class="card card-plain card-form-horizontal">
-              <div class="card-body">
-                <form method="" action="">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">mail</i>
-                          </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Your Email...">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <button type="button" class="btn btn-primary btn-round btn-block">Subscribe</button>
-                    </div>
-                  </div>
-                </form>
+<!--     <div class="col-md-6 ml-auto mr-auto">
+      <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
+        <div class="card-body">
+                <h6 class="card-category text-info">Materials</h6>
+                <h3 class="card-title">The Sculpture Where Details Matter</h3>
+                <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                </p>
+                <a href="#pablo" class="btn btn-danger btn-round">
+                  <i class="material-icons">subject</i> Read Article
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </div> -->
+
+</div>
+</div>
