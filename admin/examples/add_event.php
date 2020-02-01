@@ -42,7 +42,7 @@ if(isset($_POST["submitannouncement"]))
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Society Name (FIXED)</label>
-                          <input type="text" class="form-control" value=" <?php echo $_SESSION['soc_name']; ?> " disabled>
+                          <input type="text" class="form-control " value=" <?php echo $_SESSION['soc_name']; ?> " disabled>
                         </div>
                       </div>
                       <div class="col-md-7">
@@ -75,7 +75,7 @@ if(isset($_POST["submitannouncement"]))
                       </div>
                       <div class="col-md-6">
                       <div class="form-group">
-                        <input type="file" class="custom-file-input bmd-label-floating" id="customFile">
+                        <input type="file" class="custom-file-input" id="customFile">
                         <label class="custom-file-label bmd-label-floating" for="customFile">Choose file</label> 
                       </div>
                     </div>
