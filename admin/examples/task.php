@@ -14,7 +14,7 @@ include '../../assets/php/dbconfig.php';
                     <table class="table">
                       <thead class=" text-primary">
                         <th>
-                          Applicant Name
+                          Member Name
                         </th>
                         <th>
                           Task allocated
@@ -30,11 +30,11 @@ include '../../assets/php/dbconfig.php';
 
 <?php
 
-$query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
+$query="SELECT * FROM tasks_table WHERE task_soc_id = ".$_SESSION["soc_id"]." ORDER BY task_status";
     $sq=mysqli_query($dbconfig,$query);
     while($row=mysqli_fetch_array($sq)) {
 
-      $query_get_count="SELECT * from user_table WHERE user_id =".$row['mem_user_id'];
+      $query_get_count="SELECT * from user_table WHERE user_id =".$row['user_id'];
     $abc=mysqli_query($dbconfig,$query_get_count);
     $result_society=mysqli_fetch_array($abc);
 
@@ -42,13 +42,13 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
 
                         <tr>
                           <td>
-                            ".$result_society['user_id']."
-                          </td>
-                          <td>
-                            ".$result_society['user_email']."
-                          </td>
-                          <td>
                             ".$result_society['user_name']."
+                          </td>
+                          <td>
+                            ".$row['task_desc']."
+                          </td>
+                          <td>
+                            ".$row['task_status']."
                           </td>
                          
                         </tr>
@@ -81,8 +81,8 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Email of the candidate</label>
-                          <input type="text" class="form-control" value="" >
+                          <label class="bmd-label-floating">Member Email</label>
+                          <input type="email" class="form-control" name ="addemail" value="" >
                         </div>
                       
                       
@@ -91,16 +91,49 @@ $query="SELECT * FROM members_table WHERE mem_soc_id = ".$_SESSION["soc_id"];
                     
                       <div class="col-md-7">
                         <div class="form-group">
-                          <label class="bmd-label-floating">Task Details</label>
-                          <input type="email" name="addemail" class="form-control" required>
+                          <label class="bmd-label-floating">Task Description</label>
+                          <input type="text" name="descrip" class="form-control" required>
                         </div>
                      </div>
                      <div class="col-md-2">
-                        <input type="submit" name="adduser" class="btn btn-success pull-right" value="Add Task"></input>
+                        <input type="submit" name="addtask" class="btn btn-success pull-right" value="Add Task"></input>
                      </div>
 
                     </div>
 </form>
+
+
+<?php
+
+if(isset($_POST["addtask"]))
+{
+  $addemail=$_POST["addemail"];
+  $descrip=$_POST["descrip"];
+
+  $query1="SELECT * FROM user_table WHERE user_email = '".$addemail."'";
+    $sq1=mysqli_query($dbconfig,$query1);
+    $row1=mysqli_fetch_array($sq1);
+
+  if(!empty($row1))
+  {
+
+    $userid=$row1['user_id'];
+    $socid=$_SESSION['soc_id'];
+    $memdept=$_POST['addmemdept'];
+    $memrole=$_POST['addrole'];
+
+
+    $query2="INSERT into tasks_table (user_id,task_desc,task_status,task_soc_id) VALUES ('$userid','$descrip','0','$socid')"; echo $query2;
+    $sq2=mysqli_query($dbconfig,$query2);
+    if($sq2) echo "task added";
+    else echo "error adding task";
+  }
+  else echo "user does not exist";
+}
+
+?>
+
+
 </div>
           </div></div>          
 
