@@ -71,6 +71,8 @@ $societyid=$_GET["societyid"];
         <div class="section text-center">
             <div class="container">
                 <h2 class="section-title">Our Team</h2>
+
+                <div class="row">
  <?php
 
 
@@ -108,7 +110,7 @@ $societyid=$_GET["societyid"];
     
   }
 ?>
- 
+ </div>
             </div>
         </div>
     </div><!-- section -->
