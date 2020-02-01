@@ -17,7 +17,7 @@ $societyid=$_GET["societyid"];
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-        Material Kit PRO by Creative Tim
+        Material Kit
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
     <!--     Fonts and icons     -->
@@ -60,8 +60,8 @@ $societyid=$_GET["societyid"];
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
                     <div class="brand">
-                        <h1 class="title"> <?php echo $row1["so_name"] ?> </h1>
-                        <img src="<?php echo $row1["so_logo"] ?> "/>
+                        <h2 class="title"> <?php echo $row1["so_name"] ?> </h2>
+                        <img src="<?php echo $row1["so_logo"] ?> " style="height:200px;"/>
                     </div>
                 </div>
             </div>
