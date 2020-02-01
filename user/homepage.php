@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="media">
+                                <div class="media" style="padding:0% 10% 0% 10%;">
                                     <a class="float-left" href="#pablo">
                                         <div class="avatar">
                                             <img class="media-object" src="./assets/img/faces/avatar.jpg" alt="...">
