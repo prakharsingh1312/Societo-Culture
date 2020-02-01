@@ -105,7 +105,7 @@ if(isset($_GET["submitannouncement"]))
                       </div>
                     </div>
 
-                    <input type="submit" name="submitevent" id="submitevent" class="btn btn-primary pull-right" value="Post It !"></input>
+                    <input type="submit" name="submitevent" id="submitevent" class="btn btn-success pull-right" value="Post It !"></input>
 
                     <div class="clearfix"></div>
                   </form>
@@ -158,7 +158,7 @@ if(isset($_GET["submitannouncement"]))
 
                    
 
-                    <input type="submit" name="submitannouncement" class="btn btn-success pull-right" value="Announce"></input>
+                    <input type="submit" name="submitannouncement" class="btn btn-warning pull-right" value="Announce"></input>
 
                     <div class="clearfix"></div>
                   </form>
