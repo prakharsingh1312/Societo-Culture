@@ -1,3 +1,13 @@
+<?php
+include("../../assets/php/dbconfig.php");
+$societyid=$_GET["societyid"];
+
+    
+  $query1="SELECT * FROM society_table WHERE so_id ='".$societyid."' ";
+  $sq1=mysqli_query($dbconfig,$query1);
+     $row1=mysqli_fetch_array($sq1); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,8 +60,8 @@
             <div class="row">
                 <div class="col-md-8 ml-auto mr-auto text-center">
                     <div class="brand">
-                        <h1 class="title">Society Name</h1>
-                        <h4>society description</h4>
+                        <h1 class="title"> <?php echo $row1["so_name"] ?> </h1>
+                        <img src="<?php echo $row1["so_logo"] ?> "/>
                     </div>
                 </div>
             </div>
@@ -61,29 +71,44 @@
         <div class="section text-center">
             <div class="container">
                 <h2 class="section-title">Our Team</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="team-player">
-                            <div class="card card-plain">
-                                <div class="col-md-6 ml-auto mr-auto">
-                                    <img src="../assets/img/faces/avatar.jpg" alt="Thumbnail Image" class="img-raised rounded-circle img-fluid">
+ <?php
+
+
+
+  $query="SELECT * FROM members_table WHERE mem_soc_id =".$societyid;
+  $sq=mysqli_query($dbconfig,$query);
+  while($row=mysqli_fetch_array($sq))
+  {
+    
+    $query_get_user="SELECT * from user_table WHERE user_id = ".$row['mem_user_id'];
+    $abc=mysqli_query($dbconfig,$query_get_user);
+    // echo $query_get_user;
+    $result_user=mysqli_fetch_array($abc);
+
+    echo "
+                    <div class='col-md-4'>
+                        <div class='team-player'>
+                            <div class='card card-plain'>
+                                <div class='col-md-6 ml-auto mr-auto'>
+                                    <img src='../assets/img/faces/avatar.jpg' alt='Thumbnail Image' class='img-raised rounded-circle img-fluid'>
                                 </div>
-                                <h4 class="card-title">Gigi Hadid <br>
-                                    <small class="card-description text-muted">Model</small>
+                                <h4 class='card-title'>".$result_user['user_name']."
+                                   
                                 </h4>
-                                <div class="card-body">
-                                    <p class="card-description">You can write here details about one of your team members. You can give more details about what they do. Feel free to add some <a href="#">links</a> for people to be able to follow them outside the site.</p>
-                                </div>
-                                <div class="card-footer justify-content-center">
-                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-twitter"></i></a>
-                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-instagram"></i></a>
-                                    <a href="#pablo" class="btn btn-link btn-just-icon"><i class="fa fa-facebook-square"></i></a>
-                                </div>
+                                <div class='card-footer justify-content-center'>
+                  <a href='#pablo' class='btn btn-just-icon btn-link btn-twitter'><i class='fa fa-twitter'></i></a>
+                  <a href='#pablo' class='btn btn-just-icon btn-link btn-facebook'><i class='fa fa-facebook-square'></i></a>
+                  <a href='#pablo' class='btn btn-just-icon btn-link btn-google'><i class='fa fa-google'></i></a>
+                </div>
                             </div>
                         </div>
                     </div>
+    
+    ";
+    
+  }
+?>
  
-                </div>
             </div>
         </div>
     </div><!-- section -->

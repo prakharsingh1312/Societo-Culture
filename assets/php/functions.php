@@ -48,7 +48,7 @@ function upcoming_events(){
 		$content.="<div class='col-md-6 col-lg-4'>
             <div class='rotating-card-container'>
               <div class='card card-rotate card-background'>
-                <div class='front front-background' style='background-image: url('".$posterpath."');'>
+                <div class='front front-background' style=\"background-image: url('".$posterpath."');\">
                   <div class='card-body'>
                     <h6 class='card-category'>Society name</h6>
                     <a href='#pablo'>
@@ -59,12 +59,12 @@ function upcoming_events(){
                     </p>
                   </div>
                 </div>
-                <div class='back back-background' style='background-image: url('".$posterpath."');'>
-                  <div class='card-body'>
-                    <img src='".$logopath."' style='object-fit: contain'/>
+                <div class='back back-background' style=\"background-image: url('".$posterpath."');\">
+                  <div class='card-body' style='text-align:-webkit-center'>
+                    <img src='".$logopath."' style='width:50%'/>
                     
                     <div class='footer text-center'>
-                      <button class='btn btn-info btn-round'>Explore</button>
+                      <a href='examples/event.php?eventid=".$row['event_id']."' class='btn btn-info btn-round'>Explore</a>
                     </div>
                   </div>
                 </div>
@@ -97,7 +97,7 @@ function past_events(){
 
 
 		$content.="<div class='col-md-6'>
-                    <div class='card card-background' style='background-image: url('".$posterpath."');'>
+                    <div class='card card-background' style=\"background-image: url('".$posterpath."');\">
                         <div class='card-body'>
                             <h6 class='card-category text-info'>".$societyname."</h6>
                             <a href='#pablo'>
@@ -138,7 +138,7 @@ function filter_events_by_tag($tagvalue){
 		$content.="<div class='col-md-6 col-lg-4'>
             <div class='rotating-card-container'>
               <div class='card card-rotate card-background'>
-                <div class='front front-background' style='background-image: url('".$posterpath."');'>
+                <div class='front front-background'  style=\"background-image: url('".$posterpath."');\">
                   <div class='card-body'>
                     <h6 class='card-category'>".$societyname."</h6>
                     <a href='#pablo'>
@@ -150,12 +150,12 @@ function filter_events_by_tag($tagvalue){
                     <h4 class='card-title'> ".$eventdate." </h4>
                   </div>
                 </div>
-                <div class='back back-background' style='background-image: url('".$posterpath."');'>
-                  <div class='card-body'>
-                    <img src='".$logopath."' style='object-fit: contain'/>
+                <div class='back back-background' style=\"background-image: url('".$posterpath."');\">
+                  <div class='card-body' style='text-align:-webkit-center'>
+                    <img src='".$logopath."' style='width:50%'/>
                     
                     <div class='footer text-center'>
-                      <button class='btn btn-info btn-round'>Explore</button>
+                      <a href='examples/event.php?eventid=".$row['event_id']."' class='btn btn-info btn-round'>Explore</a>
                     </div>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ function filter_events_by_society($societyid){
 
 
 		$content.="<div class='col-md-6'>
-                    <div class='card card-background' style='background-image: url('".$posterpath."');'>
+                    <div class='card card-background' style=\"background-image: url('".htmlspecialchars($posterpath)."');\">
                         <div class='card-body'>
                             <h6 class='card-category text-info'>".$societyname."</h6>
                             <a href='#pablo'>
@@ -250,5 +250,41 @@ function show_announcements(){
 	}
 	return $content;
 }
-
+function show_members(){
+	global $dbconfig;
+	$content='<tr>
+                        <td>1</td>
+                        
+                      <tr>
+                        <td>2</td>
+                        <td>Minerva Hooper</td>
+                        <td>$23,789</td>
+                        <td>Curaçao</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>Sage Rodriguez</td>
+                        <td>$56,142</td>
+                        <td>Netherlands</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>Philip Chaney</td>
+                        <td>$38,735</td>
+                        <td>Korea, South</td>
+                      </tr>';
+	$query="SELECT * FROM events_table WHERE event_type='2' ORDER BY event_time DESC";
+	$sq=mysqli_query($dbconfig,$query);
+	$i=0;
+	while($row=mysqli_fetch_array($sq)){
+		$i++;
+		$content.="<tr>
+                        <td>{$i}</td>
+						<td>{}</td>
+                        <td>$36,738</td>
+                        <td>Niger</td>
+                      </tr>";
+	}
+		
+}
 ?>
