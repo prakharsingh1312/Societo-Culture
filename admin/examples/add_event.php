@@ -142,7 +142,7 @@ if(isset($_GET["submitannouncement"]))
                         </div>
                       </div>
                     </div> -->
-                    <div class="row">
+                   
                       
                     <div class="row">
                       <div class="col-md-12">

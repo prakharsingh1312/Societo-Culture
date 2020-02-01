@@ -77,7 +77,7 @@ $query="SELECT * FROM departments_table WHERE dept_soc_id = ".$_SESSION["soc_id"
           </div>
 
           <div class = "row">
-            <div class="col-lg-6 col-md-12">
+            <div class="col-lg-12 col-md-12 ml-auto mr-auto">
               <div class="card">
                 <div class="card-header card-header-success">
                   <h4 class="card-title">Add Department</h4>
@@ -86,12 +86,12 @@ $query="SELECT * FROM departments_table WHERE dept_soc_id = ".$_SESSION["soc_id"
                 <div class="card-body">
                   <form method="post" onsubmit="return false" id="dept_form" action="" enctype="multipart/form-data">
                     <div class="row">
-                      <div class="col-md-5">
+                      <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Society</label>
                           <input type="text" class="form-control" value=" <?php echo $_SESSION["soc_name"]; ?> " disabled>
                         </div>
-                      </div>
+                    
                       <!-- <div class="col-md-7">
                         <div class="form-group">
                           <label class="bmd-label-floating">Department ID</label>
@@ -100,8 +100,8 @@ $query="SELECT * FROM departments_table WHERE dept_soc_id = ".$_SESSION["soc_id"
                       </div> -->
                       
                     </div>
-                    <div class="row">
-                      <div class="col-md-12">
+                   
+                      <div class="col-md-8">
                         <div class="form-group">
                           <label class="bmd-label-floating">Department Name</label>
                           <input type="text" class="form-control" name="deptname" required>
