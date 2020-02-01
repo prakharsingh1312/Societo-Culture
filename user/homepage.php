@@ -60,7 +60,7 @@
 
 
         <div class="row">
-          <div class="col-md-6 col-lg-4">
+          <!-- <div class="col-md-6 col-lg-4">
             
             <div class="rotating-card-container">
               <div class="card card-rotate card-background">
@@ -88,7 +88,12 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
+
+          <?php echo upcoming_events(); ?>
+
+
+
         </div>
       </div>
     </div>
@@ -102,6 +107,9 @@
                     <h3 class="title text-center">Announcements</h3>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
+
+                         <?php echo show_announcements(); ?>
+
                             <div class="carousel-item active">
                                 <div class="media" style="padding:0% 10% 0% 10%;">
                                     <a class="float-left" href="#pablo">
@@ -110,7 +118,7 @@
                                         </div>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                        <h4 class="media-heading">Raghav <small>&#xB7; 1 hour ago</small></h4>
                                         <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                                         <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
                                     </div>
@@ -124,7 +132,7 @@
                                         </div>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 7 minutes ago</small></h4>
+                                        <h4 class="media-heading">Tina Andrew <small>&#xB7; 2 hours ago</small></h4>
                                         <p>Chance too good. God level bars. I&apos;m so proud of @LifeOfDesiigner #1 song in the country. Panda! Don&apos;t be scared of the truth because we need to restart the human foundation in truth I stand with the most humility. We are so blessed!</p>
                                         <p>All praises and blessings to the families of people who never gave up on dreams. Don&apos;t forget, You&apos;re Awesome!</p>
                                     </div>
@@ -146,7 +154,10 @@
     </div>
     <h3 class="title text-center">Past Events</h3>
     <div class="row" style="padding:10px 0;">
-    <div class="col-md-6 ml-auto mr-auto">
+
+      <?php echo past_events(); ?>
+
+<!--     <div class="col-md-6 ml-auto mr-auto">
       <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
         <div class="card-body">
                 <h6 class="card-category text-info">Materials</h6>
@@ -159,6 +170,7 @@
                 </a>
               </div>
             </div>
-         </div>
+    </div> -->
+
 </div>
 </div>

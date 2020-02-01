@@ -1,6 +1,8 @@
 <?php
 include("dbconfig.php");
+
 function create_user($name,$username,$useremail,$usermob,$password){
+	global $dbconfig;
 	$password=md5($password);
 	$query="INSERT into user_table (user_name,user_uname,user_email,user_mobile,user_password) VALUES('$name','$username','$useremail','$usermob','$password')";
 	$sq=mysqli_query($dbconfig,$query);
@@ -8,6 +10,7 @@ function create_user($name,$username,$useremail,$usermob,$password){
 }
 
 function login_user($username,$password){
+	global $dbconfig;
 	$password=md5($password);
 	$query="SELECT * FROM user_table WHERE user_name='$username'";
 	$sq=mysqli_query($dbconfig,$query);
@@ -23,6 +26,7 @@ function login_user($username,$password){
 }
 
 function upcoming_events(){
+	global $dbconfig;
 	$content='';
 	$query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' ";
 	$sq=mysqli_query($dbconfig,$query);
@@ -72,6 +76,7 @@ function upcoming_events(){
 
 
 function past_events(){
+	global $dbconfig;
 	$content='';
 	$query="SELECT * FROM events_table WHERE DATE(event_date) < DATE(NOW())  AND event_type='1' ORDER BY DATE(event_date) DESC";
 	$sq=mysqli_query($dbconfig,$query);
@@ -109,6 +114,7 @@ function past_events(){
 }
 
 function filter_events_by_tag($tagvalue){
+	global $dbconfig;
 	$temp=$tagvalue; $content='';
 	for($i=0;$i<strlen($tagvalue);$i++)
 	{
@@ -165,6 +171,7 @@ function filter_events_by_tag($tagvalue){
 }
 
 function filter_events_by_society($societyid){
+	global $dbconfig;
 	$content='';
 	$query="SELECT * FROM events_table WHERE society_id = ' ".$societyid." '  AND event_type='1'  ";
 	$sq=mysqli_query($dbconfig,$query);
@@ -211,6 +218,7 @@ function upload_file($file,$subpath,$responsecode){
 }
 
 function show_announcements(){
+	global $dbconfig;
 	$content='';
 	$query="SELECT * FROM events_table WHERE event_type='2' ORDER BY event_time DESC";
 	$sq=mysqli_query($dbconfig,$query);
