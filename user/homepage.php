@@ -56,9 +56,11 @@
           </div>
         </div>
 
+        <h3 class="title text-center">Upcoming Events</h3>
+
         <div class="row">
           <div class="col-md-6 col-lg-4">
-            <h3 class="title text-center">Upcoming Events</h3>
+            
             <div class="rotating-card-container">
               <div class="card card-rotate card-background">
                 <div class="front front-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
@@ -141,7 +143,8 @@
             </div>
         </div>
     </div>
-
+    <h3 class="title text-center">Past Events</h3>
+    <div class="row">
     <div class="col-md-6">
       <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
         <div class="card-body">
@@ -156,20 +159,5 @@
               </div>
             </div>
          </div>
-
-
-    <div class='col-md-6'>
-                    <div class='card card-background' style='background-image: url('".$posterpath."');'>
-                        <div class='card-body'>
-                            <h6 class='card-category text-info'>".$societyname."</h6>
-                            <a href='#pablo'>
-                                <h3 class='card-title'>".$eventname."</h3>
-                            </a>
-                            <p class='card-description'>
-                                ".$eventdesc."
-                            </p>
-                             <h4 class='card-title'> ".$eventdate." </h4>
-                        </div>
-                    </div>
-                </div>
-  </div>
+</div>
+</div>
