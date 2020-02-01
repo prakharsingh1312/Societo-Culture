@@ -1,18 +1,11 @@
 <?php
-include("../../assets/php/dbconfig.php");
-$eventid=$_GET["eventid"];
+include("dbconfig.php");
+$eventid=$GET["eventid"];
 
   $query="SELECT * FROM events_table WHERE DATE(event_date) >= DATE(NOW()) AND event_type='1' ";
   $sq=mysqli_query($dbconfig,$query);
   $row=mysqli_fetch_array($sq);
 
-   $societyid=$row['society_id'];
-    
-    $query_get_society="SELECT * from society_table WHERE so_id = '".$societyid."' ";
-    $abc=mysqli_query($dbconfig,$query_get_society);
-    $result_society=mysqli_fetch_array($abc);
-
-    $societyname=$result_society['so_name'];
 
 ?>
 <!DOCTYPE html>
@@ -42,7 +35,7 @@ $eventid=$_GET["eventid"];
     <div class="container">
       <div class="navbar-translate">
         <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit-pro/index.html">
-          <?php echo $societyname; ?> </a>
+          Society name </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon"></span>
@@ -54,7 +47,7 @@ $eventid=$_GET["eventid"];
         <ul class="navbar-nav ml-auto">
 
           <li class="button-container nav-item iframe-extern">
-            <a href="../index.php" class="btn  btn-rose   btn-round btn-block">
+            <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
               <i class="material-icons"></i> Back
             </a>
           </li>
@@ -68,18 +61,7 @@ $eventid=$_GET["eventid"];
     <div class="container">
       <div class="main main-raised main-product">
         <div class="row">
-
-          <div class="col-md-6 col-sm-6">
-            <div class="tab-content">
-
-              <div class="tab-pane active" id="product-page2">
-                <img src=" <?php echo $row["event_poster"]; ?> ">
-              </div>
-
-            </div>
-           
-          </div>
-
+          
           <div class="col-md-6 col-sm-6">
             <h2 class="title"> <?php echo $row["event_name"]; ?> </h2>
             
@@ -95,7 +77,7 @@ $eventid=$_GET["eventid"];
                 </div>
                 <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                   <div class="card-body">
-                    <p> <?php echo $row["event_des"]; ?> </p>
+                    <p>Eres&apos; daring &apos;Grigri Fortune&apos; swimsuit has the fit and coverage of a bikini in a one-piece silhouette. This fuchsia style is crafted from the label&apos;s sculpting peau douce fabric and has flattering cutouts through the torso and back. Wear yours with mirrored sunglasses on vacation.</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +92,7 @@ $eventid=$_GET["eventid"];
                 </div>
                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
                   <div class="card-body">
-                    <a href="<?php echo $row["event_reg_link"]; ?>" target="_blank"> Click Here </a>
+                   link.....
                   </div>
                 </div>
               </div>
@@ -118,7 +100,7 @@ $eventid=$_GET["eventid"];
                 <div class="card-header" role="tab" id="headingThree">
                   <h5 class="mb-0">
                     <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                      Where?
+                      Details
                       <i class="material-icons">keyboard_arrow_down</i>
                     </a>
                   </h5>
@@ -126,7 +108,9 @@ $eventid=$_GET["eventid"];
                 <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
                   <div class="card-body">
                       <ul>
-                          <li>Venue :  <?php echo $row["event_venue"]; ?> </li>
+                          <li>Date : </li>
+                          <li>Time : </li>
+                          <li>Venue : </li>
                       </ul>
                   </div>
                 </div>
@@ -137,7 +121,6 @@ $eventid=$_GET["eventid"];
       </div>
    </div>
   </div>
-
   <footer class="footer">
     <div class="container">
       <nav class="float-left">
@@ -166,19 +149,19 @@ $eventid=$_GET["eventid"];
   <script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="../assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
   <script src="../assets/js/plugins/moment.min.js"></script>
-  <!--  Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
+  <!--	Plugin for the Datepicker, full documentation here: https://github.com/Eonasdan/bootstrap-datetimepicker -->
   <script src="../assets/js/plugins/bootstrap-datetimepicker.js" type="text/javascript"></script>
   <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
   <script src="../assets/js/plugins/nouislider.min.js" type="text/javascript"></script>
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
-  <!--  Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
   <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
-  <!--  Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
   <script src="../assets/js/plugins/bootstrap-selectpicker.js" type="text/javascript"></script>
-  <!--  Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <!--	Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
   <script src="../assets/js/plugins/jasny-bootstrap.min.js" type="text/javascript"></script>
-  <!--  Plugin for Small Gallery in Product Page -->
+  <!--	Plugin for Small Gallery in Product Page -->
   <script src="../assets/js/plugins/jquery.flexisel.js" type="text/javascript"></script>
   <!-- Plugins for presentation and navigation  -->
   <script src="../assets/demo/modernizr.js" type="text/javascript"></script>
