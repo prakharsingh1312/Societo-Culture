@@ -1,153 +1,14 @@
-<!--
- =========================================================
- Material Kit PRO - v2.2.0
- =========================================================
-
- Product Page: https://www.creative-tim.com/product/material-kit-pro
- Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
- Coded by Creative Tim
-
- =========================================================
-
- The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <title>
-    Material Kit PRO by Creative Tim
-  </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-  <!--     Fonts and icons     -->
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-  <!-- CSS Files -->
-  <link href="../assets/css/material-kit.css?v=2.2.0" rel="stylesheet" />
-  <!-- CSS Just for demo purpose, don't include it in your project -->
-  <link href="../assets/demo/demo.css" rel="stylesheet" />
-  <link href="../assets/demo/vertical-nav.css" rel="stylesheet" />
-</head>
-
-<body class="signup-page sidebar-collapse">
-  <nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top  navbar-expand-lg " color-on-scroll="100" id="sectionsNav">
-    <div class="container">
-      <div class="navbar-translate">
-        <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit-pro/index.html">
-          Material Kit PRO </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="navbar-nav ml-auto">
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">apps</i> Components
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../presentation.html" class="dropdown-item">
-                <i class="material-icons">line_style</i> Presentation
-              </a>
-              <a href="../index.html" class="dropdown-item">
-                <i class="material-icons">layers</i> All Components
-              </a>
-              <a href="http://demos.creative-tim.com/material-kit-pro/docs/2.1/getting-started/introduction.html" class="dropdown-item">
-                <i class="material-icons">content_paste</i> Documentation
-              </a>
-            </div>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">view_day</i> Sections
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../sections.html#headers" class="dropdown-item">
-                <i class="material-icons">dns</i> Headers
-              </a>
-              <a href="../sections.html#features" class="dropdown-item">
-                <i class="material-icons">build</i> Features
-              </a>
-              <a href="../sections.html#blogs" class="dropdown-item">
-                <i class="material-icons">list</i> Blogs
-              </a>
-              <a href="../sections.html#teams" class="dropdown-item">
-                <i class="material-icons">people</i> Teams
-              </a>
-              <a href="../sections.html#projects" class="dropdown-item">
-                <i class="material-icons">assignment</i> Projects
-              </a>
-              <a href="../sections.html#pricing" class="dropdown-item">
-                <i class="material-icons">monetization_on</i> Pricing
-              </a>
-              <a href="../sections.html#testimonials" class="dropdown-item">
-                <i class="material-icons">chat</i> Testimonials
-              </a>
-              <a href="../sections.html#contactus" class="dropdown-item">
-                <i class="material-icons">call</i> Contacts
-              </a>
-            </div>
-          </li>
-          <li class="dropdown nav-item">
-            <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-              <i class="material-icons">view_carousel</i> Examples
-            </a>
-            <div class="dropdown-menu dropdown-with-icons">
-              <a href="../examples/about-us.html" class="dropdown-item">
-                <i class="material-icons">account_balance</i> About Us
-              </a>
-              <a href="../examples/blog-post.html" class="dropdown-item">
-                <i class="material-icons">art_track</i> Blog Post
-              </a>
-              <a href="../examples/blog-posts.html" class="dropdown-item">
-                <i class="material-icons">view_quilt</i> Blog Posts
-              </a>
-              <a href="../examples/contact-us.html" class="dropdown-item">
-                <i class="material-icons">location_on</i> Contact Us
-              </a>
-              <a href="../examples/landing-page.html" class="dropdown-item">
-                <i class="material-icons">view_day</i> Landing Page
-              </a>
-              <a href="../examples/login-page.html" class="dropdown-item">
-                <i class="material-icons">fingerprint</i> Login Page
-              </a>
-              <a href="../examples/pricing.html" class="dropdown-item">
-                <i class="material-icons">attach_money</i> Pricing Page
-              </a>
-              <a href="../examples/shopping-cart.html" class="dropdown-item">
-                <i class="material-icons">shopping_basket</i> Shopping Cart
-              </a>
-              <a href="../examples/ecommerce.html" class="dropdown-item">
-                <i class="material-icons">store</i> Ecommerce Page
-              </a>
-              <a href="../examples/product-page.html" class="dropdown-item">
-                <i class="material-icons">shopping_cart</i> Product Page
-              </a>
-              <a href="../examples/profile-page.html" class="dropdown-item">
-                <i class="material-icons">account_circle</i> Profile Page
-              </a>
-              <a href="../examples/signup-page.html" class="dropdown-item">
-                <i class="material-icons">person_add</i> Signup Page
-              </a>
-            </div>
-          </li>
-          <li class="button-container nav-item iframe-extern">
-            <a href="https://www.creative-tim.com/product/material-kit-pro?ref=presentation" target="_blank" class="btn  btn-rose   btn-round btn-block">
-              <i class="material-icons">shopping_cart</i> Buy Now
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+<?php
+if(isset($_GET['create_user']))
+{
+$name=$_POST["name"];
+$username=$_POST["username"];
+$useremail=$_POST["useremail"];
+$usermob=$_POST["usermob"];
+$password=$_POST["userpass"];
+echo create_user($name,$username,$useremail,$usermob,$password);
+}
+?>
   <div class="page-header header-filter" filter-color="purple" style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
@@ -178,7 +39,7 @@
                             <i class="material-icons">face</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" name="name" placeholder="Name..." required>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Name..." required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -188,7 +49,7 @@
                             <i class="material-icons">@</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" name="username" placeholder="Username..." required>
+                        <input type="text" class="form-control" name="username" id="username" placeholder="Username..." required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -198,7 +59,7 @@
                             <i class="material-icons">mail</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" name="useremail" placeholder="Email..." required>
+                        <input type="text" class="form-control" name="useremail" id="useremail" placeholder="Email..." required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -208,7 +69,7 @@
                             <i class="material-icons">phone</i>
                           </span>
                         </div>
-                        <input type="text" class="form-control" name="usermob" placeholder="10 Digit Mobile..." required>
+                        <input type="text" class="form-control" name="usermob" id="usermob" placeholder="10 Digit Mobile..." required>
                       </div>
                     </div>
                     <div class="form-group">
@@ -218,7 +79,7 @@
                             <i class="material-icons">lock_outline</i>
                           </span>
                         </div>
-                        <input type="password" placeholder="Password..." name="userpass" class="form-control" required />
+                        <input type="password" placeholder="Password..." name="userpass" id="userpass" class="form-control" required />
                       </div>
                     </div>
                     
@@ -229,23 +90,7 @@
                   </form>
 
 
-<?php
-if(isset($_POST["submit"]))
-{
-include '../../assets/php/dbconfig.php';
-$name=$_POST["name"];
-$username=$_POST["username"];
-$useremail=$_POST["useremail"];
-$usermob=$_POST["usermob"];
-$password=$_POST["userpass"];
-$password=md5($password);
 
-$query="INSERT into user_table (user_name,user_uname,user_email,user_mobile,user_password) VALUES('$name','$username','$useremail','$usermob','$password')";
-$sq=mysqli_query($dbconfig,$query);
-if($sq) echo "registered";
-else echo "not registered";
-}
-?>
 
 
                 </div>
