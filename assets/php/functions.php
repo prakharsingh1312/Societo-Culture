@@ -30,7 +30,7 @@ function login_user($username,$password){
 			$_SESSION['soc_id']=$result1['so_id'];
 			$_SESSION['soc_name']=$result1['so_name'];
 			$_SESSION['user_name']=$row['user_name'];
-			$_SESSION['user_id']=$row['user_name'];
+			$_SESSION['user_id']=$row['user_id'];
 			$_SESSION['user_uname']=$row['user_uname'];
 			$_SESSION['user_email']=$row['user_email'];
 			$_SESSION['user_mob']=$row['user_mobile'];
