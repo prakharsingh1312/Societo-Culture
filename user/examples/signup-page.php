@@ -8,8 +8,9 @@ $usermob=$_POST["usermob"];
 $password=$_POST["userpass"];
 echo create_user($name,$username,$useremail,$usermob,$password);
 }
-?>
-  <div class="page-header header-filter" filter-color="purple" style="background-image: url('../assets/img/bg7.jpg'); background-size: cover; background-position: top center;">
+else{
+	echo'
+  <div class="page-header header-filter" filter-color="purple" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
     <div class="container">
       <div class="row">
         <div class="col-md-10 ml-auto mr-auto">
@@ -99,4 +100,5 @@ echo create_user($name,$username,$useremail,$usermob,$password);
           </div>
         </div>
       </div>
-    </div>
+    </div>';}
+?>
