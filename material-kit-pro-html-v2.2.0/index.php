@@ -22,6 +22,7 @@
 </head>
 
 <body class="blog-posts sidebar-collapse">
+	<?php include("header.php");?>
   <div id="ReplaceHere">
   <?php include("homepage.php");?></div>
   <?php include("footer.php");?>
