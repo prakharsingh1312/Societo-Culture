@@ -5,5 +5,5 @@
 	$dbUser = "Hackowasp";
 
 
-	$mysqli = mysqli_connect($dbHost, $dbUser, $dbPasswrod, $dbDatabase);
+	$dbconfig = mysqli_connect($dbHost, $dbUser, $dbPasswrod, $dbDatabase);
 ?>
