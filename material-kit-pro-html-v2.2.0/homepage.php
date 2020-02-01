@@ -1,5 +1,5 @@
-<?php echo '<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url(\'assets/img/bg10.jpg\');">
-    <div class="container" id="replaceHere1">
+<div class="page-header header-filter header-small" data-parallax="true" style="background-image: url('assets/img/bg10.jpg');">
+    <div class="container">
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
           <h2 class="title">A Place to Share and Discover New Stories</h2>
@@ -8,7 +8,7 @@
     </div>
   </div>
   <div class="main main-raised">
-    <div class="container" id="replaceHere2">
+    <div class="container">
       <div class="section">
         <div class="row">
           <div class="col-md-8 ml-auto mr-auto text-center" style="flex:1 ; max-width:100%;">
@@ -59,18 +59,18 @@
           <div class="col-md-6 col-lg-4">
             <div class="rotating-card-container">
               <div class="card card-rotate card-background">
-                <div class="front front-background" style="background-image: url(\'./assets/img/examples/card-blog4.jpg\');">
+                <div class="front front-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
                   <div class="card-body">
                     <h6 class="card-category">Society name</h6>
                     <a href="#pablo">
                       <h3 class="card-title">Heading of Event</h3>
                     </a>
                     <p class="card-description">
-                      Don\'t be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
                     </p>
                   </div>
                 </div>
-                <div class="back back-background" style="background-image: url(\'./assets/img/examples/card-blog4.jpg\');">
+                <div class="back back-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
                   <div class="card-body">
                     <h5 class="card-title">
                       Manage Post
@@ -84,6 +84,9 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -122,5 +125,4 @@
         </div>
       </div>
     </div>
-		  </div></div></div></div>';
-?>
+  </div>
