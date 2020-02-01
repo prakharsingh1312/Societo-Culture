@@ -148,94 +148,7 @@ $(document).ready( function()
 	})
 
 	//Form1 Reponsiveness
-		$('#reset').on('click', function(){
-      $('#register-form').reset();
-		});
-		$(document).on('change','#form1_course',function(){
-			{
-			if($('#form1_course').val()=='Under Graduate')
-			{hide_input('#form1_20');$('#form1_mtech').removeAttr('required');}
-			else
-			{show_input('#form1_20');$('#form1_mtech').attr('required','1');}
-			}
-			{
-		if($('#form1_course').val()=='PhD')
-			{
-				hide_input('#form1_19');$('#form1_cgpa').removeAttr('required');}
-			else {show_input('#form1_19');$('#form1_cgpa').attr('required','1')}
-		}
-		});
-		$(document).on('click', '.btn-add', function(e)
-    {
-        e.preventDefault();
-
-        var controlForm = $('.controls form:first'),
-            currentEntry = $(this).parents('.entry:first'),
-            newEntry = $(currentEntry.clone()).appendTo(controlForm);
-
-        newEntry.find('input').val('');
-        controlForm.find('.entry:not(:last) .btn-add')
-            .removeClass('btn-add').addClass('btn-remove')
-            .removeClass('btn-success').addClass('btn-danger')
-            .html('<span class="glyphicon glyphicon-minus"></span>');
-    }).on('click', '.btn-remove', function(e)
-    {
-		$(this).parents('.entry:first').remove();
-
-		e.preventDefault();
-		return false;
-	});
-//	$(document).on('change','#form1_recommended',function(){
-//			if($('#form1_recommended').val()=='Not Recommended')
-//			{hide_input('#form1_24');$('#form1_signhod').removeAttr('required');}
-//			else
-//			{show_input('#form1_24');$('#form1_signhod').attr('required','1');}
-//		 });
-	$(document).on('input','#form1_relevance_text',function(){
-			if($('#form1_relevance_text').val()!='')
-			{hide_input('#form1_relevance');$('#form1_relevance').removeAttr('required');}
-			else
-			{show_input('#form1_relevance');$('#form1_relevance').attr('required','1');}
-		 });
-	$(document).on('input','#form1_relevance',function(){
-			if($('#form1_relevance').val()!='')
-			{hide_input('#form1_relevance_text');$('#form1_relevance_text').removeAttr('required');}
-			else
-			{show_input('#form1_relevance_text');$('#form1_relevance_text').attr('required','1');}
-		 });
-	$(document).on('input','#form1_objective_text',function(){
-			if($('#form1_objective_text').val()!='')
-			{hide_input('#form1_objective');$('#form1_objective').removeAttr('required');}
-			else
-			{show_input('#form1_objective');$('#form1_objective').attr('required','1');}
-		 });
-	$(document).on('input','#form1_objective',function(){
-			if($('#form1_objective').val()!='')
-			{hide_input('#form1_objective_text');$('#form1_objective_text').removeAttr('required');}
-			else
-			{show_input('#form1_objective_text');$('#form1_objective_text').attr('required','1');}
-		 });
-	$(document).on('input','#form1_cost_details_text',function(){
-			if($('#form1_cost_details_text').val()!='')
-			{hide_input('#form1_cost_details');$('#form1_cost_details').removeAttr('required');}
-			else
-			{show_input('#form1_cost_details');$('#form1_cost_details').attr('required','1');}
-		 });
-	$(document).on('input','#form1_cost_details',function(){
-			if($('#form1_cost_details').val()!='')
-			{hide_input('#form1_cost_details_text');$('#form1_cost_details_text').removeAttr('required');}
-			else
-			{show_input('#form1_cost_details_text');$('#form1_cost_details_text').attr('required','1');}
-		 });
-	$(document).on('change','#form1_research',function(){
-			if($('#form1_research').val()=='No')
-			{hide_input('#form1_16');$('#form1_title').removeAttr('required');
-			hide_input('#form1_17');$('#form1_accepted_paper').removeAttr('required');}
-			else
-			{show_input('#form1_16');$('#form1_title').attr('required');
-			show_input('#form1_17');$('#form1_accepted_paper').attr('required','1');}
-		 });
-
+		
 	//Forms
 		$(document).on('click','.login_button',function(){ dologin(); });
 		$(document).on('submit','#form1',function(){ form1_submit(); });
@@ -328,15 +241,15 @@ function hash()
 function dologin(){
 	var username=$('#username').val();
 	var password=$('#password').val();
-	$.post('login.php?login',{username:username,password:password},function(data){
+	$.post('examples/login-page.php?login',{username:username,password:password},function(data){
 		if(data==1){
 			notify('Logging In',4,'success');
 			showAdmin()
 		}
 		else if (data==0)
 			notify('Incorrect Username/Password',4,'danger');
-		else
-			notify(data,4,'danger')
+		else if (data==-1)
+			notify('User does not exist.',4,'danger')
 	})}
 
 function notify(text, time,type)
