@@ -35,9 +35,9 @@ function login_user($username,$password){
 
 			return 1;
 			}
+			else return 0;
 		}
-		else return 0;
-	}
+	
 	else return -1;
 }
 
