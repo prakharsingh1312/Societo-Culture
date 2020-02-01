@@ -520,7 +520,7 @@ function showEditUser(id){
 		$('#modal-content').loadingView({'state':false});
 	});
 }
-function addUser(){
+function signup(){
 	$('#ReplaceHere').loadingView({'state':true});
 	var username=$('#username').val();
 	var name=$('#name').val();
