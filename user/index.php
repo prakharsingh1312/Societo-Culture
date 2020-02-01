@@ -22,12 +22,16 @@
 </head>
 
 <body class="blog-posts sidebar-collapse">
+	<?php include("header.php");?>
   <div id="ReplaceHere">
-  <?php include("homepage.php")?></div>
+  <?php include("homepage.php");?></div>
   <?php include("footer.php");?>
   <!--   Core JS Files   -->
-  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+<!--  <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>-->
+	<script src="../assets/js/jquery.js"></script>
 		<script src="../assets/js/main.js"></script>
+	<script src="../assets/js/jquery-cookies.js"></script>
+	<script src="../assets/js/jquery-base64.js"></script>
 		<script src="../assets/js/loadingView.js"></script>
   <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
   <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>

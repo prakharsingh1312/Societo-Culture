@@ -5,16 +5,29 @@
 //Loading view
 var global_cookie_prefix = 'Hackowasp';
 //pageload functions
+function showHome(){
+	$('#ReplaceHere').loadingView({'state':true});
+	$.get('homepage.php',function(data){
 
+		$('#ReplaceHere').html(data);
+		$('#ReplaceHere').loadingView({'state':false});
+
+	});
+}
+function showSignup(){
+	$('#ReplaceHere').loadingView({'state':true});
+	$.get('examples/signup-page.php',function(data){
+
+		$('#ReplaceHere').html(data);
+		$('#ReplaceHere').loadingView({'state':false});
+
+	});
+}
 function showlogin(){
-	$('#').loadingView({'state':true});
-	$.get('login.php',function(data){
-
-		if(data!=1)
-		$('.wrapper').html(data);
-		else
-			showAdmin();
-		$('.wrapper').loadingView({'state':false});
+	$('#ReplaceHere').loadingView({'state':true});
+	$.get('examples/login-page.php',function(data){
+		$('#ReplaceHere').html(data);
+		$('#ReplaceHere').loadingView({'state':false});
 	});
 }
 function showAdmin(){
