@@ -55,8 +55,12 @@
             </div>
           </div>
         </div>
+
+        <h3 class="title text-center">Upcoming Events</h3>
+
         <div class="row">
           <div class="col-md-6 col-lg-4">
+            
             <div class="rotating-card-container">
               <div class="card card-rotate card-background">
                 <div class="front front-background" style="background-image: url('./assets/img/examples/card-blog4.jpg');">
@@ -139,42 +143,21 @@
             </div>
         </div>
     </div>
-
-
-
-    <div class="subscribe-line">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h3 class="title">Get Tips &amp; Tricks every Week!</h3>
-            <p class="description">
-              Join our newsletter and get news in your inbox every week! We hate spam too, so no worries about this.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <div class="card card-plain card-form-horizontal">
-              <div class="card-body">
-                <form method="" action="">
-                  <div class="row">
-                    <div class="col-md-8">
-                      <div class="input-group">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text">
-                            <i class="material-icons">mail</i>
-                          </span>
-                        </div>
-                        <input type="text" class="form-control" placeholder="Your Email...">
-                      </div>
-                    </div>
-                    <div class="col-md-4">
-                      <button type="button" class="btn btn-primary btn-round btn-block">Subscribe</button>
-                    </div>
-                  </div>
-                </form>
+    <h3 class="title text-center">Past Events</h3>
+    <div class="row">
+    <div class="col-md-6">
+      <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
+        <div class="card-body">
+                <h6 class="card-category text-info">Materials</h6>
+                <h3 class="card-title">The Sculpture Where Details Matter</h3>
+                <p class="card-description">
+                      Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                </p>
+                <a href="#pablo" class="btn btn-danger btn-round">
+                  <i class="material-icons">subject</i> Read Article
+                </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+         </div>
+</div>
+</div>
