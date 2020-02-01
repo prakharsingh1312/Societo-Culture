@@ -30,7 +30,7 @@
               <p>Members</p>
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item "id="header_dept">
             <a class="nav-link" href="#dept">
               <i class="material-icons">account_tree</i>
               <p>Departments</p>
