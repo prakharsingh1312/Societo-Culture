@@ -97,8 +97,8 @@
 				</div>
 			</nav>
 			<!-- End Navbar -->
-			<div class="content">
-				<?php include("dash.php");?>
+			<div class="content" id="wrapper">
+				
 	</div>
 	
 			
@@ -106,6 +106,10 @@
 	</div>
 	<!--   Core JS Files   -->
 	<script src="../assets/js/core/jquery.min.js"></script>
+	<script src="../../assets/js/jquery-base64.js"></script>
+	<script src="../../assets/js/jquery-cookies.js"></script>
+	<script src="../../assets/js/jquery.js"></script>
+	<script src="../../assets/js/main.js"></script>
 	<script src="../assets/js/core/popper.min.js"></script>
 	<script src="../assets/js/core/bootstrap-material-design.min.js"></script>
 	<script src="https://unpkg.com/default-passive-events"></script>

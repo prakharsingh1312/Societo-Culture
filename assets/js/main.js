@@ -32,7 +32,7 @@ function showlogin(){
 	});
 }
 function showAdmin(){
-	window.location.href="./admin";
+	window.location.href="../admin/examples/#";
 	$(window).bind('hashchange', function ()
 		{
 			hash();
@@ -59,7 +59,7 @@ function showtrack(){
 }
 function showDash(){
 	$('#wrapper').loadingView({'state':true});
-	$.get('./pages/dash.php',function(data){
+	$.get('dash.php',function(data){
 
 		$('#wrapper').html(data);
 		linkChange('#users_dash');
@@ -75,9 +75,9 @@ function showDept(){
 		$('#wrapper').loadingView({'state':false});
 	});
 }
-function showFormC(){
+function showEvent(){
 	$('#wrapper').loadingView({'state':true});
-	$.get('./pages/form_control.php',function(data){
+	$.get('add_event.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#form_control');
 		$('#wrapper').loadingView({'state':false});
@@ -231,23 +231,21 @@ function hash()
 				showDash();
 			else if(hash == 'dept')
 				showDept();
-			else if(hash == 'formC')
-				showFormC();
+			else if(hash == 'event')
+				showEvent();
 			else if(hash == 'users')
 				showUsers();
 			else if(hash == 'userP')
 				showUserP();
 		}
 }
-
-
 function dologin(){
 	var username=$('#username').val();
 	var password=$('#password').val();
 	$.post('examples/login-page.php?login',{username:username,password:password},function(data){
 		if(data==1){
 			notify('Logging In',4,'success');
-			
+			showAdmin();
 		}
 		else if (data==0)
 			notify('Incorrect Username/Password',4,'danger');
