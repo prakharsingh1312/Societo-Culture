@@ -127,7 +127,7 @@
                             </div>
                         </div>
                         <a class="carousel-control-prev"  href="#carouselExampleControls" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon"  style="color:#e91d63" aria-hidden="true"><i class="material-icons">arrow_backward_ios</i></span>
+                            <span class="carousel-control-prev-icon"  style="color:#e91d63" aria-hidden="true"><i class="material-icons">arrow_back_ios</i></span>
                             <span class="sr-only">Previous</span>
                         </a>
                         <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
