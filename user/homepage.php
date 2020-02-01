@@ -9,7 +9,7 @@
   </div>
   <div class="main main-raised">
     <div class="container">
-      <div class="section">
+      <div class="section" style="padding:10px 0;">
         <h3 class="title text-center">Upcoming Events</h3>
 
         <div class="row">
@@ -145,7 +145,7 @@
         </div>
     </div>
     <h3 class="title text-center">Past Events</h3>
-    <div class="row">
+    <div class="row" style="padding:10px 0;">
     <div class="col-md-6 ml-auto mr-auto">
       <div class="card card-background" style="background-image: url('./assets/img/examples/card-blog3.jpg')">
         <div class="card-body">
