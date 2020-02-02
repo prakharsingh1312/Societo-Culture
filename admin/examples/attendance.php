@@ -15,11 +15,11 @@ include '../../assets/php/dbconfig.php';
                     <button href="#pablo" class="dropdown-toggle btn btn-primary btn-round btn-block" data-toggle="dropdown">Attendance for the event </button>
                     <div class="dropdown-menu dropdown-menu-right">
                       <h6 class="dropdown-header">Event Date</h6>
-                      <a href="#pablo" class="dropdown-item">1-02-2020</a>
-                      <a href="#pablo" class="dropdown-item">2-02-2020</a>
-                      <a href="#pablo" class="dropdown-item">3-02-2020</a>
-                      <a href="#pablo" class="dropdown-item">4-02-2020</a>
-                      <a href="#pablo" class="dropdown-item">5-02-2020</a>
+						<?php $sql="SELECT * from events_table where event_type=3";
+						$query=mysqli_query($dbconfig,$sql);
+						while($row=mysqli_fetch_assoc($query)){
+							echo '<a  class="dropdown-item">'.$row['event_date'].'</a>';
+						}?>
                     </div>
                   </div>
                 </div></h4>
