@@ -33,6 +33,7 @@ function login_user($username,$password){
 			$_SESSION['user_id']=$row['user_id'];
 			$_SESSION['user_uname']=$row['user_uname'];
 			$_SESSION['user_email']=$row['user_email'];
+			$_SESSION['user_role']=$row['user_role'];
 			$_SESSION['user_mob']=$row['user_mobile'];
 			
 
