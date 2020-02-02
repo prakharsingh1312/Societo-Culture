@@ -273,8 +273,8 @@ function show_announcements(){
 }
 function show_members(){
 	global $dbconfig;
-	$content='';
-	$query="SELECT * FROM user_table,members_table,departments_table WHERE mem_soc_id={$_SESSION['soc_id']} and user_id=mem_user_id and mem_dept=dept_id ORDER BY mem_score DESC";
+	$content=''; $socid=$_SESSION['soc_id'];
+	$query="SELECT * FROM user_table,members_table,departments_table WHERE mem_soc_id='$socid' and user_id=mem_user_id and mem_dept=dept_id ORDER BY mem_score DESC";
 	$sq=mysqli_query($dbconfig,$query);
 	$i=0;
 	while($row=mysqli_fetch_array($sq)){
