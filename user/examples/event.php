@@ -131,6 +131,51 @@ $eventid=$_GET["eventid"];
                   </div>
                 </div>
               </div>
+
+             
+
+
+
+                      </ul>
+                  </div>
+                </div>
+              </div>
+             <div class="card card-raised card-form-horizontal col-md-6 ml-auto mr-auto">
+              <h3 style="text-align: center;">Get A Reminder!</h3>
+                  <div class="card-body ">
+                    <form method="post" action="">
+                      <div class="row">
+                        <div class="col-lg-8 col-md-6 ">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">
+                                <i class="material-icons">mail</i>
+                              </span>
+                            </div>
+                            <input type="email" name="emailsubscribe" placeholder="Your Email..." class="form-control">
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 ">
+                          <input type="submit" name="submitsubscribe" class="btn btn-rose btn-block" value="Submit"></input>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+<?php
+
+if(isset($_POST["submitsubscribe"]))
+{
+  $email=$_POST["emailsubscribe"];
+  $eid=$_GET["eventid"];
+  $query="INSERT INTO event_reminders VALUES('$email','$eid')";
+  $sq=mysqli_query($dbconfig,$query);
+  if($sq) echo "<script>alert('Thanks! You will be notified via email before the event.');</script>";
+
+}
+
+?>
+
             </div>
           </div>
         </div>
