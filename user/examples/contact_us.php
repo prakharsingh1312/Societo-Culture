@@ -18,7 +18,7 @@
                     <div class="col-md-6">
                         <p class="description">You can contact any society and the respective admin will get back to you.<br><br>
                         </p>
-                        <form role="form" id="contact-form" method="post">
+                        <form role="form" id="contact_form"onsubmit="return false" action="" enctype="multipart/form-data" method="post">
                             <div class="form-group">
                                 <label for="name" nam class="bmd-label-floating">Your name</label>
                                 <input type="text" class="form-control" name="name" id="name">
@@ -63,7 +63,7 @@ while($row1=mysqli_fetch_array($sql1))
                         </form>
                     </div>
  <?php
-if(isset($_POST["submitcontact"]))
+if(isset($_GET["submitcontact"]))
 {
     $name=$_POST["name"];
     $email=$_POST["email"];
