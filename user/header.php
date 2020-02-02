@@ -24,7 +24,7 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
             </a>
           </li>
           <li class="nav-item">
-            <a href="#home" class="nav-link">
+            <a href="#contact" class="nav-link">
               <i class="material-icons">phone</i> Contact Us
             </a>
           </li> 
