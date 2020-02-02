@@ -263,7 +263,7 @@ function show_announcements(){
                                         </div>
                                     </a>
                                     <div class='media-body'>
-                                        <h4 class='media-heading'>".$societyname." <small>&#xB7; Just Now </small></h4>
+                                        <h4 class='media-heading'>".$societyname." <small>&#xB7;</small></h4>
                                         <p>".$eventdesc."</p>
                                     </div>
                                 </div>
