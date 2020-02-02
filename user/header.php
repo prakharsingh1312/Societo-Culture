@@ -23,11 +23,11 @@ echo '<nav class="navbar navbar-color-on-scroll navbar-transparent    fixed-top 
               <i class="material-icons">notification_important</i> Events
             </a>
           </li>
-          <!--<li class="nav-item">
+          <li class="nav-item">
             <a href="#home" class="nav-link">
-              <i class="material-icons">restore</i> Past Events
+              <i class="material-icons">phone</i> Contact Us
             </a>
-          </li> -->
+          </li> 
           <li class="button-container nav-item iframe-extern">
             <a href="#login" class="btn  btn-rose   btn-round btn-block">
               <i class="material-icons">fingerprint</i> Login
