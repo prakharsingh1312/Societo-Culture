@@ -46,15 +46,10 @@ $societyid=$_GET["societyid"];
             <div class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
              
-                    <li class="button-container nav-item iframe-extern">
-<<<<<<< HEAD
-                        <a href="#" target="_blank" class="btn  btn-rose   btn-round btn-block">
-=======
                         <a href="../#home"  class="btn  btn-rose   btn-round btn-block">
->>>>>>> a4c6d96e226ffdfe8900455d44a013bbeaf202ee
                             <i class="material-icons"></i> Home
                         </a>
-                    </li>
+
                 </ul>
             </div>
         </div>
