@@ -65,7 +65,7 @@
 									</div>
 									<p class="card-category">Pending Tasks</p>
 <?php
-	$query="SELECT count(*) from tasks_table WHERE task_status='0' AND user_id='".$_SESSION['user_id']."'";
+	$query="SELECT count(*) from tasks_table WHERE task_status='0' AND user_id='".$_SESSION['user_id']."'"; 
 	$sql=mysqli_query($dbconfig,$query);
 	$row=mysqli_fetch_array($sql);
 									echo"
@@ -265,10 +265,10 @@
 													$userid=$_SESSION['user_id'];
 													$socid=$_SESSION['soc_id'];
 													
-													$query="SELECT * from tasks_table where task_status='0' and user_id='$userid' and task_soc_id='$socid'";
-//													echo $query;
-													$sql=mysqli_query($dbconfig,$query);
-													while($row=mysqli_fetch_array($sql)){
+													$query1="SELECT * from tasks_table where task_status='0' and user_id='$userid' and task_soc_id='$socid'";
+													
+													$sql1=mysqli_query($dbconfig,$query1);
+													while($row1=mysqli_fetch_array($sql1)){
 														echo'<tr>
 														<td>
 															<div class="form-check">
@@ -281,7 +281,7 @@
 															
 															</div>
 														</td>
-														<td>'.$row['task_desc'].'</td>
+														<td>'.$row1['task_desc'].'</td>
 														<td class="td-actions text-right">
 															
 														
