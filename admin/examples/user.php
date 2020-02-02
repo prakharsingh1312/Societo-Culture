@@ -31,19 +31,19 @@ if(isset($_GET["update_user"]))
                       <div class="col-md-5">
                         <div class="form-group">
                           <label class="bmd-label-floating">Society</label>
-                          <input type="text" class="form-control" value=" <?php echo $_SESSION['soc_name']; ?> " disabled>
+                          <input type="text" class="form-control" value="<?php echo $_SESSION['soc_name']; ?>" disabled>
                         </div>
                       </div>
                       <div class="col-md-3">
                         <div class="form-group">
                           <label class="bmd-label-floating">Username</label>
-                          <input type="text" class="form-control" name="username" value=" <?php echo $_SESSION['user_uname']; ?> " required>
+                          <input type="text" class="form-control" name="username" value="<?php echo $_SESSION['user_uname']; ?>" required>
                         </div>
                       </div>
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Email address</label>
-                          <input type="email" class="form-control" name="email" value=" <?php echo $_SESSION['user_email']; ?>  " required>
+                          <input type="email" class="form-control" name="email" value="<?php echo $_SESSION['user_email']; ?>" required>
                         </div>
                       </div>
                     </div>
@@ -51,7 +51,7 @@ if(isset($_GET["update_user"]))
                       <div class="col-md-12">
                         <div class="form-group">
                           <label class="bmd-label-floating">Name</label>
-                          <input type="text" class="form-control" name="name" value=" <?php echo $_SESSION['user_name']; ?>  " >
+                          <input type="text" class="form-control" name="name" value="<?php echo $_SESSION['user_name']; ?>" >
                         </div>
                       </div>
                       
@@ -66,7 +66,7 @@ if(isset($_GET["update_user"]))
                       <div class="col-md-4">
                         <div class="form-group">
                           <label class="bmd-label-floating">Mobile Number</label>
-                          <input type="text" class="form-control" name="mob" value=" <?php echo $_SESSION['user_mob']; ?>  ">
+                          <input type="text" class="form-control" name="mob" value="<?php echo $_SESSION['user_mob']; ?>">
                         </div>
                       </div>
                     </div>
