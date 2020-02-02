@@ -184,6 +184,7 @@ $(document).ready( function()
 		$(document).on('submit','#event_form',function(){ var data=form_submit("#event_form","add_event.php?submitevent"); });
 		$(document).on('submit','#dept_form',function(){ var data=form_submit("#dept_form","add_dept.php?add_dept"); });
 		$(document).on('submit','#profile_form',function(){ var data=form_submit("#profile_form","user.php?update_user"); });
+		$(document).on('submit','#task_form',function(){ var data=form_submit("#task_form","task.php?addtask"); });
 		$(document).on('submit','#member_form',function(){ var data=form_submit("#member_form","members.php?adduser"); });
 		$(document).on('submit','#announcement_form',function(){ var data=form_submit("#announcement_form","add_event.php?submitannouncement"); });
 		$(document).on('click','.add_dept_button',function(){ addDept(); });

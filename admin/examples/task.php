@@ -77,7 +77,7 @@ $query="SELECT * FROM tasks_table WHERE task_soc_id = ".$_SESSION["soc_id"]." OR
                   
                 </div>
                 <div class="card-body">
-                  <form method="post">
+                  <form method="post" onsubmit="return false" id="task_form" action="" enctype="multipart/form-data>
                     <div class="row">
                       <div class="col-md-3">
                         <div class="form-group">
@@ -105,7 +105,7 @@ $query="SELECT * FROM tasks_table WHERE task_soc_id = ".$_SESSION["soc_id"]." OR
 
 <?php
 
-if(isset($_POST["addtask"]))
+if(isset($_GET["addtask"]))
 {
   $addemail=$_POST["addemail"];
   $descrip=$_POST["descrip"];
