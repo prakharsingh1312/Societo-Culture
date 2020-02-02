@@ -27,7 +27,7 @@ include("../../assets/php/dbconfig.php");
       echo 
       "
 
-            <div class='col-md-6 col-lg-4'>
+            <div class='col-md-3'>
               <div class='card card-profile card-plain'>
                 <div class='card-header card-header-image'>
                   
