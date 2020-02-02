@@ -5,6 +5,10 @@ if(isset($_GET['login'])){
 	$password=mysqli_real_escape_string($dbconfig,$_POST['password']);
 	echo login_user($username,$password);
 }
+else if(isset($_GET['logout'])){
+	session_destroy();
+	echo 1;
+}
 else{
 echo '<div class="page-header header-filter" style="background-image: url(\'assets/img/bg7.jpg\'); background-size: cover; background-position: top center;">
 

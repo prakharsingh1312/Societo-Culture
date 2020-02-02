@@ -88,7 +88,7 @@
 							<div class="card card-stats">
 								<div class="card-header card-header-success card-header-icon">
 									<div class="card-icon">
-										<i class="material-icons">store</i>
+										<i class="material-icons">assignment_turned_in</i>
 									</div>
 									<p class="card-category">Completed Tasks</p>
 <?php
@@ -111,9 +111,47 @@
 						</div>
 						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 							<div class="card card-stats">
+								<div class="card-header card-header-success card-header-icon">
+									<div class="card-icon">
+										<i class="material-icons">grade</i>
+									</div>
+									<p class="card-category">Rank</p>
+<?php
+									$id=$_SESSION['soc_id'];
+	$query="SELECT * FROM members_table where mem_soc_id='$id' ORDER BY mem_score desc";
+	$sql=mysqli_query($dbconfig,$query);
+									$i=0;
+	while($row=mysqli_fetch_array($sql)){
+		$i++;
+		if($row['mem_user_id']==$_SESSION['user_id']){
+			break;
+		}
+	}
+									echo"
+													<h3 class='card-title'>".$i."
+                    
+					<small>";
+					if($i==1)echo "st";
+									else if($i==2)echo"nd";
+									else if($i==3)echo "rd";
+									else echo 'th';
+									echo"</small>
+                  </h3>
+									";
+?>
+								</div>
+								<div class="card-footer">
+									<div class="stats">
+										<i class="material-icons">date_range</i> Good Work !
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
+							<div class="card card-stats">
 								<div class="card-header card-header-danger card-header-icon">
 									<div class="card-icon">
-										<i class="material-icons">info_outline</i>
+										<i class="material-icons">favorite_border</i>
 									</div>
 									<p class="card-category">Score</p>
 <?php

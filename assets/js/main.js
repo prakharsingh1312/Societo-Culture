@@ -104,7 +104,7 @@ function showUserP(){
 	$.get('user.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#user_profile');
-		$('#wrapper').loadingView({'state':false});
+		//$('#wrapper').loadingView({'state':false});
 	});
 }
 function showattendance(){
@@ -125,6 +125,13 @@ function showQuery(){
 	$.get('query.php',function(data){
 		$('#wrapper').html(data);
 		linkChange('#header_query');
+		//$('#wrapper').loadingView({'state':false});
+	});
+}
+function showReminder(){
+	$.get('reminder.php',function(data){
+		$('#wrapper').html(data);
+		linkChange('#header_reminder');
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
@@ -283,6 +290,8 @@ function hash()
 				showQuery();
 			else if(hash == 'logout')
 				logout();
+			else if(hash == 'reminder')
+				showReminder();
 			
 			
 		}
@@ -354,7 +363,7 @@ function filter(id){
 function logout(){
 	$.get('../../user/examples/login-page.php?logout',function(data){
 		if (data==1)
-			window.location.href="../../#login";
+			location.reload();
 		$(window).bind('hashchange', function ()
 		{
 			hash();
@@ -362,7 +371,7 @@ function logout(){
 	})
 }
 function linkChange(id){
-	var ids=['#users_dashboard','#user_profile','#header_dept','#header_attendance','#header_task','#header_event','#header_members','header_query'];
+	var ids=['#users_dashboard','#user_profile','#header_dept','#header_attendance','#header_task','#header_event','#header_members','header_query','header_reminder'];
 	$.each(ids,function(index,value){
 		if(id==value){
 			$(value).addClass('active');

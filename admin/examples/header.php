@@ -50,6 +50,12 @@ if($_SESSION['user_role']<3){
               <i class="material-icons">priority_high</i>
               <p>Queries</p>
             </a>
+          </li> 
+		  <li class="nav-item "id="header_reminder">
+            <a class="nav-link" href="#reminder">
+              <i class="material-icons">alarm</i>
+              <p>Reminder</p>
+            </a>
           </li>';
 }
          echo'<li class="nav-item "id="header_logout">

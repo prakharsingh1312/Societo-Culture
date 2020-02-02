@@ -1,4 +1,8 @@
-<?php include('../../assets/php/functions.php');?>
+<?php include('../../assets/php/functions.php');
+if(!isset($_SESSION['user_id'])){
+header("location:../../user/#login");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
