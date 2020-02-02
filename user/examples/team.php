@@ -78,7 +78,7 @@ $societyid=$_GET["societyid"];
 
   $query="SELECT * FROM members_table WHERE mem_soc_id =".$societyid;
   $sq=mysqli_query($dbconfig,$query);
-							$i=0;
+							$i=1;
   while($row=mysqli_fetch_array($sq))
   {
     
@@ -87,13 +87,13 @@ $societyid=$_GET["societyid"];
     // echo $query_get_user;
 	  
     $result_user=mysqli_fetch_array($abc);
-$i++;
+
     echo "
                     <div class='col-md-3'>
                         <div class='team-player'>
                             <div class='card card-plain'>
                                 <div class='col-md-6 ml-auto mr-auto'>
-                                    <img src='../assets/img/faces/".$i.".jpg' alt='Thumbnail Image' class='img-raised rounded-circle img-fluid'>
+                                    <img src='../assets/img/faces/".$i.".png' alt='Thumbnail Image' class='img-raised rounded-circle img-fluid'>
                                 </div>
                                 <h4 class='card-title'>".$result_user['user_name']."
                                    
