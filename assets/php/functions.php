@@ -116,9 +116,9 @@ function past_events(){
 		$logopath=$result_society['so_logo'];
 
 
-		$content.="<div class='col-md-6 col-lg-4'>
+		$content.="<div class='col-md-6 col-lg-6' '>
                     <div class='card card-background' style=\"background-image: url('".$posterpath."');\">
-                        <div class='card-body'>
+                        <div class='card-body' >
                             <h6 class='card-category text-info'>".$societyname."</h6>
                             <a href='#pablo'>
                                 <h3 class='card-title'>".$eventname."</h3>
@@ -255,7 +255,7 @@ function show_announcements(){
 		$logopath=$result_society['so_logo'];
 
 
-		$content.="<div class='carousel-item active'>
+		$content.="
                                 <div class='media' style='padding:0% 10% 0% 10%;'>
                                     <a class='float-left' href='#pablo'>
                                         <div class='avatar'>
@@ -267,7 +267,7 @@ function show_announcements(){
                                         <p>".$eventdesc."</p>
                                     </div>
                                 </div>
-                            </div>";
+                            ";
 	}
 	return $content;
 }
