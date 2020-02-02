@@ -135,6 +135,13 @@ function showReminder(){
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
+function showContact(){
+	$.get('examples/contact_us.php',function(data){
+		$('#ReplaceHere').html(data);
+		
+		//$('#wrapper').loadingView({'state':false});
+	});
+}
 function bs_input_file() {
 	$(".input-file").before(
 		function() {
@@ -270,6 +277,8 @@ function hash()
 		showHome();
 	else if (hash == 'societies')
 		showSociety();
+	else if (hash == 'contact')
+		showContact();
 	else if(window.location.href.indexOf('/admin')>0)
 		{
 			if(hash == '')
