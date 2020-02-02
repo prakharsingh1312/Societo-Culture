@@ -1,4 +1,5 @@
- <div class="sidebar-wrapper">
+ <?php
+echo'<div class="sidebar-wrapper">
         <ul class="nav">
           <li class="nav-item active" id="users_dashboard" >
             <a class="nav-link" href="#">
@@ -12,7 +13,9 @@
               <p>User Profile</p>
             </a>
           </li>
-          <li class="nav-item " id="header_attendance">
+          ';
+if($_SESSION['user_role']<3){
+	echo'<li class="nav-item " id="header_attendance">
             <a class="nav-link" href="#attendance">
               <i class="material-icons">content_paste</i>
               <p>Attendance</p>
@@ -41,13 +44,13 @@
               <i class="material-icons">playlist_add_check</i>
               <p>Tasks</p>
             </a>
-          </li>
-        
-          <!-- <li class="nav-item active-pro ">
+          </li>';
+}
+         echo' <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
                 </a>
             </li> -->
         </ul>
-      </div>
+      </div>';?>
