@@ -272,7 +272,6 @@ function show_announcements(){
 	return $content;
 }
 function show_members(){
-	$_SESSION['soc_id']=1;
 	global $dbconfig;
 	$content='';
 	$query="SELECT * FROM user_table,members_table,departments_table WHERE mem_soc_id={$_SESSION['soc_id']} and user_id=mem_user_id and mem_dept=dept_id ORDER BY mem_score DESC";

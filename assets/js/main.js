@@ -121,6 +121,13 @@ function showTask(){
 		//$('#wrapper').loadingView({'state':false});
 	});
 }
+function showQuery(){
+	$.get('query.php',function(data){
+		$('#wrapper').html(data);
+		linkChange('#header_query');
+		//$('#wrapper').loadingView({'state':false});
+	});
+}
 function bs_input_file() {
 	$(".input-file").before(
 		function() {
@@ -272,6 +279,10 @@ function hash()
 				showattendance();
 			else if(hash == 'task')
 				showTask();
+			else if(hash == 'query')
+				showQuery();
+			else if(hash == 'logout')
+				logout();
 			
 			
 		}
@@ -341,9 +352,9 @@ function filter(id){
 	});
 }
 function logout(){
-	$.get('../login.php?logout',function(data){
+	$.get('../../user/examples/login-page.php?logout',function(data){
 		if (data==1)
-			window.location.href="../#login";
+			window.location.href="../../#login";
 		$(window).bind('hashchange', function ()
 		{
 			hash();
@@ -351,7 +362,7 @@ function logout(){
 	})
 }
 function linkChange(id){
-	var ids=['#users_dashboard','#user_profile','#header_dept','#header_attendance','#header_task','#header_event','#header_members'];
+	var ids=['#users_dashboard','#user_profile','#header_dept','#header_attendance','#header_task','#header_event','#header_members','header_query'];
 	$.each(ids,function(index,value){
 		if(id==value){
 			$(value).addClass('active');

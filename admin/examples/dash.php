@@ -141,7 +141,7 @@
 						<div class="col-lg-6 col-md-12">
 							<div class="card">
 								<div class="card-header card-header-primary">
-									<h4 class="card-title">Member Stats</h4>
+									<h4 class="card-title"></h4>
 									<p class="card-category">
 										<?php echo $_SESSION['soc_name']; ?>
 									</p>

@@ -44,9 +44,21 @@ if($_SESSION['user_role']<3){
               <i class="material-icons">playlist_add_check</i>
               <p>Tasks</p>
             </a>
+          </li>
+		  <li class="nav-item "id="header_query">
+            <a class="nav-link" href="#query">
+              <i class="material-icons">priority_high</i>
+              <p>Queries</p>
+            </a>
           </li>';
 }
-         echo' <!-- <li class="nav-item active-pro ">
+         echo'<li class="nav-item "id="header_logout">
+            <a class="nav-link" href="#logout">
+              <i class="material-icons">directions_run</i>
+              <p>Logout</p>
+            </a>
+          </li>
+		 <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
