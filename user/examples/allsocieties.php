@@ -4,7 +4,16 @@
       <div class="row">
         <div class="col-md-8 ml-auto mr-auto text-center">
           <h1 class="title">SOCIETIES AND CLUBS</h1>
-          <h3>A total of <span style="font-size: 2.3rem; font-weight: 500;" class="number-counter" data-count-from="0" data-count-to="32" data-count-speed="30"></span> societies enrolled.</h3>
+          
+<?php
+include("../../assets/php/dbconfig.php");
+          $query2="SELECT count(*) FROM society_table";
+  $sq2=mysqli_query($dbconfig,$query2);
+     $row1=mysqli_fetch_array($sq2);
+            
+            ?>
+          
+          <h3>A total of <span style="font-size: 2.3rem; font-weight: 500;" class="number-counter" data-count-from="0" data-count-to="<?php echo $row1['count(*)']; ?>" data-count-speed="50"></span> societies enrolled.</h3>
         </div>
       </div>
     </div>
@@ -16,7 +25,6 @@
           <div class="row">
 
             <?php
-include("../../assets/php/dbconfig.php");
 
 
     
