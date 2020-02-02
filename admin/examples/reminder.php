@@ -6,7 +6,7 @@ include '../../assets/php/dbconfig.php';
             <div class="col-md-12">
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">List of all Task</h4>
+                  <h4 class="card-title ">People Interested in your events</h4>
                   
                 </div>
                 <div class="card-body">
