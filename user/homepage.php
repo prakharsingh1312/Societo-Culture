@@ -91,11 +91,13 @@ echo'
                 <div class="media-area">
                     <h3 class="title text-center">Announcements</h3>
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner" id="announce">';
+                        <div class="carousel-inner" id="announce">
+                        <div class="carousel-item active">';
 
                           echo show_announcements(); 
 
-                           echo ' 
+                           echo '
+                           </div> 
                         </div>
                        <!-- <a class="carousel-control-prev"  href="#carouselExampleControls" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon"  style="color:#e91d63" aria-hidden="true"><i class="material-icons">arrow_back_ios</i></span>
@@ -110,11 +112,14 @@ echo'
             </div>
         </div>
     </div>
+    <div class="container">
     <h3 class="title text-center">Past Events</h3>
-    <div class="row" id="modal-content">';
+
+    <div class="row " id="modal-content">
+    ';
 
        echo past_events();
 echo'
-
+</div>
 </div>
 </div>';}?>
